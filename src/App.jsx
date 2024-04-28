@@ -12,9 +12,9 @@ const Test = styled.div`
 `;
 
 const chipsData = [
-  { id: 1, content: "전체" },
-  { id: 2, content: "교내" },
-  { id: 3, content: "교외" },
+  { id: 1, content: "전체", uri: "전체 페이지" },
+  { id: 2, content: "교내", uri: "교내 페이지" },
+  { id: 3, content: "교외", uri: "교외 페이지" },
 ];
 
 function App() {

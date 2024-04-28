@@ -21,4 +21,5 @@ export const Title = styled.p`
       : props.theme.color.grey._600};
   ${(props) => props.theme.typo.fontSize._5};
   ${(props) => props.theme.typo.fontWeight._500};
+  cursor: pointer;
 `;
