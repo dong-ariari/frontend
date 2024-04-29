@@ -1,15 +1,23 @@
+import { useNavigate } from "react-router-dom";
 import * as S from "./chips.styles";
 
-const Chips = ({ title, variant }) => {
+const Chips = ({ data }) => {
+  const navigate = useNavigate();
+
   const handleChipsClick = (uri) => {
     console.log(uri);
+    navigate(uri);
   };
 
   return (
     <>
-      <S.Container variant={variant}>
-        {title.map((item) => (
-          <S.Title key={item.id} onClick={() => handleChipsClick(item.uri)}>
+      <S.Container>
+        {data.map((item) => (
+          <S.Title
+            $variant={item.variant}
+            key={item.id}
+            onClick={() => handleChipsClick(item.uri)}
+          >
             {item.content}
           </S.Title>
         ))}
