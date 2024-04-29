@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export const InputContainer = styled.div`
   display: flex;
-  gap: 80px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  gap: 5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 `;
 
 export const Title = styled.p`
@@ -17,13 +17,13 @@ export const Title = styled.p`
 export const StyledInput = styled.input`
   background-color: ${(props) => props.theme.color.grey._0};
   border-color: ${(props) => props.theme.color.grey._100};
-  border-width: 1px;
+  border-width: 0.0625rem;
   border-style: solid;
-  border-radius: 8px;
-  width: 444px;
-  padding-left: 16px;
-  padding-top: 12px;
-  padding-bottom: 11px;
+  border-radius: 0.5rem;
+  width: 27.75rem;
+  padding-left: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.6875rem;
 
   &::placeholder {
     color: ${(props) => props.theme.color.grey._400};
