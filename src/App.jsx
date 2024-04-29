@@ -7,6 +7,8 @@ import All from "./pages/all";
 import Campus from "./pages/oncampus";
 import Suburbs from "./pages/offcampus";
 import { CHIPS_DATA } from "./data/components/chips";
+import { SIDEMENU_DATA } from "./data/components/sideMenu";
+import SideMenuComponent from "./components/sideMenu/sideMenuComponent";
 
 // default theme 사용법
 const Test = styled.div`
@@ -22,6 +24,9 @@ function App() {
       <GlobalStyle />
       <ThemeProvider theme={DefaultTheme}>
         <ChipsComponenet data={CHIPS_DATA} />
+        <div style={{ backgroundColor: "#d4d4d4" }}>
+          <SideMenuComponent data={SIDEMENU_DATA} />
+        </div>
         <Routes>
           <Route path="/" element={<Test>Hello World</Test>} />
           <Route path="/all" element={<All />} />

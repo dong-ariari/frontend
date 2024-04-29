@@ -1,16 +1,28 @@
+import { useNavigate } from "react-router-dom";
 import * as S from "./sideMenu.styles";
-import EyeIcon from "../../assets/images/eyes.png";
 
-const SideMenu = () => {
+const SideMenu = ({ data }) => {
+  const navigate = useNavigate();
+
+  const handleChipsClick = (uri) => {
+    console.log(uri);
+    navigate(uri);
+  };
+
   return (
-    <>
-      <S.Container>
-        <S.Section>
-          <S.Image src={EyeIcon} alt="side_menu_icon" />
-          <S.Text>둘러보기</S.Text>
-        </S.Section>
-      </S.Container>
-    </>
+    <S.Wrapper>
+      {data.map((item) => (
+        <S.Container
+          $variant={item.variant}
+          onClick={() => handleChipsClick(item.uri)}
+        >
+          <S.Section key={item.id}>
+            <S.Image src={item.imgPath} alt="side_menu_icon" />
+            <S.Text $variant={item.variant}>{item.title}</S.Text>
+          </S.Section>
+        </S.Container>
+      ))}
+    </S.Wrapper>
   );
 };
 

@@ -1,10 +1,19 @@
 import styled from "styled-components";
 
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+`;
 export const Container = styled.div`
   width: 184px;
   border-radius: 12px;
-  background-color: ${(props) => props.theme.color.grey._500};
+  background-color: ${(props) => {
+    return props.$variant === true ? props.theme.color.white : "#F4F4F4";
+  }};
   cursor: pointer;
+  box-shadow: ${(props) =>
+    props.$variant === true ? "0px 4px 12px rgba(0, 0, 0, 0.1)" : "none"};
 `;
 
 export const Section = styled.div`
@@ -19,31 +28,20 @@ export const Section = styled.div`
 export const Image = styled.img`
   width: 20px;
   height: 20px;
+  align-self: center;
 `;
 
 export const Text = styled.p`
   align-content: center;
-  ${(props) => props.theme.typo.fontWeight._600};
+  color: ${(props) => {
+    return props.$variant === true
+      ? props.theme.color.grey._700
+      : props.theme.color.grey._500;
+  }};
   ${(props) => props.theme.typo.fontSize._6};
+  ${(props) => {
+    return props.$variant === true
+      ? props.theme.typo.fontWeight._600
+      : props.theme.typo.fontWeight._500;
+  }};
 `;
-
-// export const Section = styled.div`
-//   padding-left: 0.875rem;
-//   padding-right: 0.875rem;
-//   padding-top: 0.5rem;
-//   padding-bottom: 0.5rem;
-//   border-radius: 1rem;
-//   background-color: ${(props) => {
-//     return props.$variant === true
-//       ? props.theme.color.grey._800
-//       : props.theme.color.grey._200;
-//   }};
-//   color: ${(props) => {
-//     return props.$variant === true
-//       ? props.theme.color.white
-//       : props.theme.color.grey._600;
-//   }};
-//   ${(props) => props.theme.typo.fontSize._5};
-//   ${(props) => props.theme.typo.fontWeight._500};
-//   cursor: pointer;
-// `;
