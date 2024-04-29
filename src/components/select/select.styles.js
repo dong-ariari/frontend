@@ -32,23 +32,10 @@ export const StyledSelect = styled.select`
   background-size: 1.5rem;
   ${(props) => props.theme.typo.fontSize._7};
   ${(props) => props.theme.typo.fontWeight._500};
+  color: ${(props) => props.theme.color.grey._400};
 
   &:focus {
     border-color: ${(props) => props.theme.color.grey._300};
     outline: none;
   }
-  /* option[hidden][disabled] {
-    color: ${(props) => props.theme.color.grey._400};
-  }
-  option {
-    color: ${(props) => props.theme.color.grey._700};
-  } */
-`;
-
-export const Option = styled.option`
-  color: ${(props) => props.theme.color.grey._400};
-`;
-
-export const OptionLabel = styled.option`
-  color: ${(props) => props.theme.color.grey._700};
 `;

@@ -16,13 +16,13 @@ const Select = ({ title, placeholder, options }) => {
         onChange={handleChange}
         // defaultValue=""
       >
-        <S.Option value="" disabled hidden>
+        <option value="" disabled hidden>
           {placeholder}
-        </S.Option>
+        </option>
         {options.map((option, index) => (
-          <S.OptionLabel key={index} value={option.value}>
+          <option key={index} value={option.value}>
             {option.label}
-          </S.OptionLabel>
+          </option>
         ))}
       </S.StyledSelect>
     </S.SelectContainer>
