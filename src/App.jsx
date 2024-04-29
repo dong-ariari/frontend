@@ -4,9 +4,9 @@ import GlobalStyle from "./assets/styles/GlobalStyle";
 import DefaultTheme from "./assets/styles/DefaultTheme";
 import ChipsComponenet from "./components/chips/chipsComponenet";
 import All from "./pages/all";
-import Campus from "./pages/oncampus";
-import Suburbs from "./pages/offcampus";
 import { CHIPS_DATA } from "./data/components/chips";
+import Oncampus from "./pages/oncampus";
+import Offcampus from "./pages/offcampus";
 
 // default theme 사용법
 const Test = styled.div`
@@ -25,8 +25,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Test>Hello World</Test>} />
           <Route path="/all" element={<All />} />
-          <Route path="/campus" element={<Campus />} />
-          <Route path="/suburbs" element={<Suburbs />} />
+          <Route path="/oncampus" element={<Oncampus />} />
+          <Route path="/offcampus" element={<Offcampus />} />
         </Routes>
       </ThemeProvider>
     </Router>
