@@ -24,6 +24,8 @@ export const StyledInput = styled.input`
   padding-left: 1rem;
   padding-top: 0.75rem;
   padding-bottom: 0.6875rem;
+  ${(props) => props.theme.typo.fontSize._7};
+  ${(props) => props.theme.typo.fontWeight._500};
 
   &::placeholder {
     color: ${(props) => props.theme.color.grey._400};
