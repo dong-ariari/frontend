@@ -4,8 +4,8 @@ import GlobalStyle from "./assets/styles/GlobalStyle";
 import DefaultTheme from "./assets/styles/DefaultTheme";
 import ChipsComponenet from "./components/chips/chipsComponenet";
 import All from "./pages/all";
-import Campus from "./pages/campus";
-import Suburbs from "./pages/suburbs";
+import Campus from "./pages/oncampus";
+import Suburbs from "./pages/offcampus";
 import { CHIPS_DATA } from "./data/components/chips";
 
 // default theme 사용법

@@ -1,4 +1,4 @@
-const Campus = () => {
+const Oncampus = () => {
   return (
     <>
       <div>Campus</div>
@@ -6,4 +6,4 @@ const Campus = () => {
   );
 };
 
-export default Campus;
+export default Oncampus;
