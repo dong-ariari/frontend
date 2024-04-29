@@ -1,7 +1,11 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import styled, { ThemeProvider } from "styled-components";
 import GlobalStyle from "./assets/styles/GlobalStyle";
 import DefaultTheme from "./assets/styles/DefaultTheme";
-import Chips from "./components/chips/chips";
+import ChipsComponenet from "./components/chips/chipsComponenet";
+import All from "./pages/all";
+import Campus from "./pages/campus";
+import Suburbs from "./pages/suburbs";
 
 // default theme 사용법
 const Test = styled.div`
@@ -11,21 +15,20 @@ const Test = styled.div`
   ${(props) => props.theme.typo.fontWeight._500};
 `;
 
-const chipsData = [
-  { id: 1, content: "전체", uri: "전체 페이지" },
-  { id: 2, content: "교내", uri: "교내 페이지" },
-  { id: 3, content: "교외", uri: "교외 페이지" },
-];
-
 function App() {
   return (
-    <>
+    <Router>
       <GlobalStyle />
       <ThemeProvider theme={DefaultTheme}>
-        <Test>hello world</Test>
-        <Chips title={chipsData} />
+        <ChipsComponenet />
+        <Routes>
+          <Route path="/" element={<Test>Hello World</Test>} />
+          <Route path="/all" element={<All />} />
+          <Route path="/campus" element={<Campus />} />
+          <Route path="/suburbs" element={<Suburbs />} />
+        </Routes>
       </ThemeProvider>
-    </>
+    </Router>
   );
 }
 
