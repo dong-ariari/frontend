@@ -6,6 +6,7 @@ import ChipsComponenet from "./components/chips/chipsComponenet";
 import All from "./pages/all";
 import Campus from "./pages/campus";
 import Suburbs from "./pages/suburbs";
+import { CHIPS_DATA } from "./data/components/chips";
 
 // default theme 사용법
 const Test = styled.div`
@@ -20,7 +21,7 @@ function App() {
     <Router>
       <GlobalStyle />
       <ThemeProvider theme={DefaultTheme}>
-        <ChipsComponenet />
+        <ChipsComponenet data={CHIPS_DATA} />
         <Routes>
           <Route path="/" element={<Test>Hello World</Test>} />
           <Route path="/all" element={<All />} />
