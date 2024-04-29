@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Chips from "./chips";
 import { useLocation } from "react-router-dom";
-import { CHIPS_DATA } from "../../data/components/chips";
 
-const ChipsComponenet = () => {
+const ChipsComponenet = ({ data }) => {
   const location = useLocation();
-  const [chipsData, setChipsData] = useState(CHIPS_DATA);
+  const [chipsData, setChipsData] = useState(data);
 
   useEffect(() => {
     const updatedData = chipsData.map((item) => ({
