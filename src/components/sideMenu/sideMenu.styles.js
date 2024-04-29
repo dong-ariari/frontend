@@ -3,11 +3,11 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 0.75rem;
 `;
 export const Container = styled.div`
-  width: 184px;
-  border-radius: 12px;
+  width: 11.5rem;
+  border-radius: 0.75rem;
   background-color: ${(props) => {
     return props.$variant === true ? props.theme.color.white : "#F4F4F4";
   }};
@@ -18,16 +18,16 @@ export const Container = styled.div`
 
 export const Section = styled.div`
   display: flex;
-  padding-left: 20px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  gap: 8px;
+  padding-left: 1.25rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  gap: 0.5rem;
   justify-content: flex-start;
 `;
 
 export const Image = styled.img`
-  width: 20px;
-  height: 20px;
+  width: 1.25rem;
+  height: 1.25rem;
   align-self: center;
 `;
 
