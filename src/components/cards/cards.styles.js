@@ -25,7 +25,6 @@ export const Poster = styled.img`
   height: ${(props) => (props.small ? "12.563rem" : "17.125rem")};
   object-fit: cover;
   border-radius: 0.625rem;
-  background-color: ${(props) => props.theme.color.grey._200};
 `;
 export const Box = styled.div`
   display: flex;

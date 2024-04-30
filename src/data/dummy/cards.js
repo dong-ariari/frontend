@@ -18,7 +18,7 @@ export const DUMMY_CARD = [
   {
     id: 2,
     clubName: "Title",
-    posterData: null,
+    posterData: 'unvalid img',
     recruitText:
       "content_text_content_text_content_text_content_text_content_text_content_text_content_text_content_text_content_text_content_text_",
   },
