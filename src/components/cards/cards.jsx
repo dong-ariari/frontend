@@ -5,6 +5,8 @@ export default function Cards({ small, cardList }) {
     e.currentTarget.src = defaultImg;
     console.log(e.currentTarget.src);
   }
+
+  
   return (
     <S.Layer>
       {cardList.map((item) => (
@@ -14,6 +16,7 @@ export default function Cards({ small, cardList }) {
               small={small}
               src={item.posterData === null ? defaultImg : item.posterData}
               onError={errorHandler}
+              alt=""
             />
             <S.Box>
               <S.Title>{item.clubName}</S.Title>
