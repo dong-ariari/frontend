@@ -7,6 +7,8 @@ import All from "./pages/all";
 import Campus from "./pages/oncampus";
 import Suburbs from "./pages/offcampus";
 import { CHIPS_DATA } from "./data/components/chips";
+import { DUMMY_CARD } from "./data/dummy/cards";
+import Cards from "./components/cards/cards";
 
 // default theme 사용법
 const Test = styled.div`
@@ -21,7 +23,9 @@ function App() {
     <Router>
       <GlobalStyle />
       <ThemeProvider theme={DefaultTheme}>
-        <ChipsComponenet data={CHIPS_DATA} />
+        <Cards cardList={DUMMY_CARD} />
+        <Cards small="true" cardList={DUMMY_CARD} />
+
         <Routes>
           <Route path="/" element={<Test>Hello World</Test>} />
           <Route path="/all" element={<All />} />
