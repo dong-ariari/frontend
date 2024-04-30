@@ -4,17 +4,20 @@ import logo from "../../assets/images/logo.png";
 export default function Header({ img, userName }) {
   return (
     <S.Container>
-      <S.Image src={logo} />
-      <S.Title>
-        <S.Eng>AliAli</S.Eng>
-        <S.Kor>아리아리</S.Kor>
-      </S.Title>
+      <S.Wrapper>
+        <S.Title>
+          <S.Logo src={logo} />
+          <S.Eng>AliAli</S.Eng>
+          <S.Kor>아리아리</S.Kor>
+        </S.Title>
 
-      <S.Profile>
-        <S.Image src={img} />
-        <S.UserName>{userName}</S.UserName>
-      </S.Profile>
+        <S.Profile>
+          <S.Image src={img} />
+          <S.UserName>{userName}</S.UserName>
+        </S.Profile>
+      </S.Wrapper>
 
+      
       <S.LinkBox>
         <S.Link>새 알림</S.Link>
         <S.Link>마이페이지</S.Link>

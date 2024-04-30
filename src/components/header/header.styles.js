@@ -4,11 +4,16 @@ export const Container = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: full;
   height: 5rem;
   padding: 0 13.125rem;
   background-color: #9bf22c;
   justify-content: space-between;
+`;
+
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 4.813rem;
 `;
 
 export const Logo = styled.img`
@@ -43,6 +48,7 @@ export const Profile = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  gap: 0.5rem;
 `;
 export const UserName = styled.div`
   ${(props) => props.theme.typo.fontSize._7};
@@ -53,10 +59,10 @@ export const UserName = styled.div`
 export const LinkBox = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 0.5rem;
+  gap: 1rem;
 `;
 
-export const Link = styled.div`
+export const Link = styled.a`
   color: ${(props) => props.theme.color.grey._700};
   padding: 0.625rem;
 `;
