@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Chips from "./chips";
 import { useLocation } from "react-router-dom";
 
-const ChipsComponenet = ({ data }) => {
+const ChipsComponent = ({ data }) => {
   const location = useLocation();
   const [chipsData, setChipsData] = useState(data);
 
@@ -17,4 +17,4 @@ const ChipsComponenet = ({ data }) => {
   return <Chips data={chipsData} />;
 };
 
-export default ChipsComponenet;
+export default ChipsComponent;
