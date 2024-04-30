@@ -1,5 +1,14 @@
 import styled from "styled-components";
 
+export const Layer = styled.div`
+  display: flex;
+  flex-direction: row;
+  max-width: 75.313rem;
+  flex-wrap: wrap;
+  gap:3.75rem 1.5rem;
+  
+`;
+
 export const Container = styled.div`
   display: flex;
   flex-direction: column;

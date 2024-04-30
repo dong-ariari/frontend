@@ -7,7 +7,7 @@ import All from "./pages/all";
 import Campus from "./pages/oncampus";
 import Suburbs from "./pages/offcampus";
 import { CHIPS_DATA } from "./data/components/chips";
-import Cards from "./components/cards/cards";
+import CardsComponent from "./components/cards/cardsComponent";
 import { DUMMY_CARD } from "./data/dummy/cards";
 
 // default theme 사용법
@@ -23,8 +23,9 @@ function App() {
     <Router>
       <GlobalStyle />
       <ThemeProvider theme={DefaultTheme}>
-        <Cards data={DUMMY_CARD} />
-        <Cards small data={DUMMY_CARD} />
+        <CardsComponent cardList={DUMMY_CARD} />
+        <CardsComponent small cardList={DUMMY_CARD} />
+
         <Routes>
           <Route path="/" element={<Test>Hello World</Test>} />
           <Route path="/all" element={<All />} />
