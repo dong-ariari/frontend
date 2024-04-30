@@ -6,11 +6,18 @@ export default function Cards({ small, cardList }) {
     console.log(e.currentTarget.src);
   }
 
-  
+  function clickHandler(cardId) {
+    console.log(cardId);
+  }
+
   return (
     <S.Layer>
       {cardList.map((item) => (
-        <S.Container key={item.id} small={small}>
+        <S.Container
+          onClick={() => clickHandler(item.id)}
+          key={item.id}
+          small={small}
+        >
           <S.Main>
             <S.Poster
               small={small}
