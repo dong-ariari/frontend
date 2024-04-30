@@ -2,10 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import styled, { ThemeProvider } from "styled-components";
 import GlobalStyle from "./assets/styles/GlobalStyle";
 import DefaultTheme from "./assets/styles/DefaultTheme";
-import ChipsComponenet from "./components/chips/chipsComponenet";
+import ChipsComponent from "./components/chips/chipsComponent";
 import All from "./pages/all";
-import Campus from "./pages/oncampus";
-import Suburbs from "./pages/offcampus";
 import { CHIPS_DATA } from "./data/components/chips";
 import { DUMMY_CARD } from "./data/dummy/cards";
 import Cards from "./components/cards/cards";
@@ -29,8 +27,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Test>Hello World</Test>} />
           <Route path="/all" element={<All />} />
-          <Route path="/campus" element={<Campus />} />
-          <Route path="/suburbs" element={<Suburbs />} />
+          <Route path="/oncampus" element={<Oncampus />} />
+          <Route path="/offcampus" element={<Offcampus />} />
         </Routes>
       </ThemeProvider>
     </Router>
