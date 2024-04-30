@@ -2,11 +2,7 @@ import * as S from "./cards.styles";
 import defaultImg from "../../assets/icons/defaultPoster.png";
 export default function Cards({ small, cardList }) {
   function errorHandler(e) {
-    if (small) {
-      e.currentTarget.src = defaultImgSmall;
-    } else {
-      e.currentTarget.src = defaultImg;
-    }
+    e.currentTarget.src = defaultImg;
     console.log(e.currentTarget.src);
   }
   return (
