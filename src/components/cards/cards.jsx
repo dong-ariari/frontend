@@ -8,7 +8,7 @@ export default function Cards({ small, cardList }) {
   return (
     <S.Layer>
       {cardList.map((item) => (
-        <S.Container small={small}>
+        <S.Container key={item.key} small={small}>
           <S.Main>
             <S.Poster
               small={small}

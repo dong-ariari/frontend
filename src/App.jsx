@@ -24,7 +24,7 @@ function App() {
       <GlobalStyle />
       <ThemeProvider theme={DefaultTheme}>
         <Cards cardList={DUMMY_CARD} />
-        <Cards small cardList={DUMMY_CARD} />
+        <Cards small="true" cardList={DUMMY_CARD} />
 
         <Routes>
           <Route path="/" element={<Test>Hello World</Test>} />
