@@ -41,12 +41,12 @@ export const Badge = styled.div`
 `;
 
 export const Text = styled.p`
-  display: block
-  width: 100%;
-  max-height: 2.75rem;
-  overflow: auto;
+  display: -webkit-box;
   word-wrap: break-word;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
   text-overflow: ellipsis;
-  text-align: start;
+  height: 2.625rem;
   ${(props) => props.theme.typo.fontSize._7};
 `;

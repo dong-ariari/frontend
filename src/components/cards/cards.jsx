@@ -1,6 +1,6 @@
 import * as S from "./cards.styles";
 
-export default function Cards({small,  data }) {
+export default function Cards({ small, data }) {
   return (
     <S.Container small={small}>
       <S.Main>
