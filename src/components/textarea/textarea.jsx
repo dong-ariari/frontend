@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import * as S from "./textarea.styels";
 
-const Textarea = ({ title, placeholder }) => {
+const Textarea = ({ title, placeholder, isEdit }) => {
   const [value, setValue] = useState("");
 
   const handleChange = (e) => {
@@ -19,6 +19,8 @@ const Textarea = ({ title, placeholder }) => {
           placeholder={placeholder}
           value={value}
           onChange={handleChange}
+          readOnly={!isEdit}
+          isEditable={isEdit}
           maxLength="500"
         />
         <S.CharCounter textLength={value.length}>
