@@ -1,4 +1,5 @@
 import Input from "../components/input/input";
+import Textarea from "../components/textarea/textarea";
 
 const Offcampus = () => {
   return (
@@ -9,6 +10,10 @@ const Offcampus = () => {
           placeholder={"동아리 이름을 입력해주세요"}
         />
         <Input title={"교내 동아리"} placeholder={"교내 동아리"} />
+        <Textarea
+          title={"소개글"}
+          placeholder={"소개하고 싶은 내용을 입력해주세요"}
+        />
       </div>
     </>
   );
