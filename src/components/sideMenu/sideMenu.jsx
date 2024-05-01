@@ -13,6 +13,7 @@ const SideMenu = ({ data }) => {
     <S.Wrapper>
       {data.map((item) => (
         <S.Container
+          key={item.id}
           $variant={item.variant}
           onClick={() => handleChipsClick(item.uri)}
         >
