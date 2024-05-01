@@ -8,11 +8,17 @@ const Offcampus = () => {
         <Input
           title={"동아리 이름"}
           placeholder={"동아리 이름을 입력해주세요"}
+          isEdit={false}
         />
-        <Input title={"교내 동아리"} placeholder={"교내 동아리"} />
+        <Input
+          title={"교내 동아리"}
+          placeholder={"교내 동아리"}
+          isEdit={true}
+        />
         <Textarea
           title={"소개글"}
           placeholder={"소개하고 싶은 내용을 입력해주세요"}
+          isEdit={true}
         />
       </div>
     </>
