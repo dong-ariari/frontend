@@ -1,5 +1,6 @@
 import Input from "../components/input/input";
 import Textarea from "../components/textarea/textarea";
+import ToggleBtn from "../components/toggleBtn/toggleBtn";
 
 const Offcampus = () => {
   return (
@@ -19,6 +20,11 @@ const Offcampus = () => {
           title={"소개글"}
           placeholder={"소개하고 싶은 내용을 입력해주세요"}
           isEdit={true}
+        />
+        <ToggleBtn
+          title={"모집 현황"}
+          btnContent1={"모집 중"}
+          btnContent2={"모집 완료"}
         />
       </div>
     </>
