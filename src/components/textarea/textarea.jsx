@@ -5,17 +5,26 @@ const Textarea = ({ title, placeholder }) => {
   const [value, setValue] = useState("");
 
   const handleChange = (e) => {
-    setValue(e.target.value);
+    console.log("Input value:", e.target.value);
+    if (e.target.value.length <= 500) {
+      setValue(e.target.value);
+    }
   };
 
   return (
     <S.TextContainer>
       <S.Title>{title}</S.Title>
-      <S.Textarea
-        placeholder={placeholder}
-        value={value}
-        onChange={handleChange}
-      />
+      <S.TextAreaContainer>
+        <S.Textarea
+          placeholder={placeholder}
+          value={value}
+          onChange={handleChange}
+          maxLength="500"
+        />
+        <S.CharCounter textLength={value.length}>
+          {value.length} &nbsp;<S.Counter>/ 500</S.Counter>
+        </S.CharCounter>
+      </S.TextAreaContainer>
     </S.TextContainer>
   );
 };
