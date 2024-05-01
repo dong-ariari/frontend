@@ -2,16 +2,19 @@ import styled from "styled-components";
 
 export const InputContainer = styled.div`
   display: flex;
-  gap: 5rem;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+  gap: 6.25rem;
+  padding: 0.75rem 0rem;
+  max-width: 41.563rem;
+  justify-content: space-between;
 `;
 
 export const Title = styled.p`
+  min-width: 6.25rem;
   color: ${(props) => props.theme.color.grey._500};
   ${(props) => props.theme.typo.fontSize._6};
   ${(props) => props.theme.typo.fontWeight._500};
-  align-self: center;
+  /* align-self: center; */
+  align-self: flex-start;
 `;
 
 export const StyledInput = styled.input`
@@ -32,7 +35,7 @@ export const StyledInput = styled.input`
   }
 
   &:focus {
-    border-color: ${(props) => props.theme.color.grey._300};
+    border-color: ${(props) => props.theme.color.blue._400};
     outline: none;
   }
 `;
