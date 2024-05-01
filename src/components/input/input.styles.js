@@ -18,8 +18,12 @@ export const Title = styled.p`
 `;
 
 export const StyledInput = styled.input`
-  background-color: ${(props) => props.theme.color.grey._0};
-  border-color: ${(props) => props.theme.color.grey._100};
+  background-color: ${(props) =>
+    props.isEditable ? props.theme.color.grey._0 : props.theme.color.grey._200};
+  border-color: ${(props) =>
+    props.isEditable
+      ? props.theme.color.grey._100
+      : props.theme.color.grey._200};
   border-width: 0.0625rem;
   border-style: solid;
   border-radius: 0.5rem;
@@ -31,11 +35,17 @@ export const StyledInput = styled.input`
   ${(props) => props.theme.typo.fontWeight._500};
 
   &::placeholder {
-    color: ${(props) => props.theme.color.grey._400};
+    color: ${(props) =>
+      props.isEditable
+        ? props.theme.color.grey._400
+        : props.theme.color.grey._500};
   }
 
   &:focus {
-    border-color: ${(props) => props.theme.color.blue._400};
+    border-color: ${(props) =>
+      props.isEditable
+        ? props.theme.color.blue._400
+        : props.theme.color.grey._200};
     outline: none;
   }
 `;

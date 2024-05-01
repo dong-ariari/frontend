@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import * as S from "./input.styles";
 
-const Input = ({ title, placeholder }) => {
+const Input = ({ title, placeholder, isEdit }) => {
   const [value, setValue] = useState("");
 
   const handleChange = (e) => {
@@ -15,6 +15,8 @@ const Input = ({ title, placeholder }) => {
         placeholder={placeholder}
         value={value}
         onChange={handleChange}
+        readOnly={!isEdit}
+        isEditable={isEdit}
       />
     </S.InputContainer>
   );
