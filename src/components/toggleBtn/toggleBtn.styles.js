@@ -13,7 +13,6 @@ export const Title = styled.p`
   color: ${(props) => props.theme.color.grey._500};
   ${(props) => props.theme.typo.fontSize._6};
   ${(props) => props.theme.typo.fontWeight._500};
-  /* align-self: center; */
   align-self: flex-start;
 `;
 
@@ -32,9 +31,21 @@ export const BtnSection = styled.div`
 export const Btn = styled.div`
   padding: 0.5rem 1.625rem;
   border-radius: 0.5rem;
-  background-color: ${(props) => props.theme.color.blue._400};
-  color: ${(props) => props.theme.color.white};
+  background-color: ${(props) =>
+    props.active ? props.theme.color.blue._400 : props.theme.color.grey._200};
+  color: ${(props) =>
+    props.active ? props.theme.color.white : props.theme.color.grey._500};
   ${(props) => props.theme.typo.fontSize._7};
   ${(props) => props.theme.typo.fontWeight._700};
   cursor: pointer;
+
+  &:hover {
+    background-color: ${(props) =>
+      props.active ? props.theme.color.blue._500 : props.theme.color.grey._200};
+  }
+
+  &:active {
+    background-color: ${(props) =>
+      props.active ? props.theme.color.blue._600 : props.theme.color.grey._200};
+  }
 `;
