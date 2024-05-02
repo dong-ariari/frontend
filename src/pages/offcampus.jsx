@@ -1,14 +1,11 @@
-import Input from "../components/input/input";
+import ImageSlot from "../components/imageSlot/imageSlot";
+import ImageVal from "../assets/images/루피.png";
 
 const Offcampus = () => {
   return (
     <>
       <div style={{ backgroundColor: "#ffe8fb", padding: 100 }}>
-        <Input
-          title={"동아리 이름"}
-          placeholder={"동아리 이름을 입력해주세요"}
-        />
-        <Input title={"교내 동아리"} placeholder={"교내 동아리"} />
+        <ImageSlot title={"대표 이미지"} image={ImageVal} />
       </div>
     </>
   );
