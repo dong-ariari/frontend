@@ -6,19 +6,26 @@ export const Layer = styled.div`
   gap: 0.75rem;
 `;
 
+export const Depart = styled.div`
+  display: flex;
+  flex-direction: column;
+  background-color: ${(props) => props.theme.color.grey._100};
+  border: solid 0.063rem ${(props) => props.theme.color.grey._200};
+  border-radius: 0.5rem;
+`;
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   background-color: ${(props) => props.theme.color.grey._100};
   border: solid 0.063rem ${(props) => props.theme.color.grey._200};
   border-radius: 0.5rem;
-
 `;
 
 export const Head = styled.button`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  width: 14.125rem;
   padding: 0.375rem 0.75rem;
   border: solid 0.063rem
     ${(props) => {
@@ -46,10 +53,10 @@ export const Head = styled.button`
 
 export const Spread = styled.div`
   display: flex;
+  padding-left: 1rem;
   height: 2.25rem;
   justify-content: start;
   align-items: center;
-  padding-left: 1rem;
   color: ${(props) => props.theme.color.grey._600};
   ${(props) => props.theme.typo.fontSize._7};
 `;
