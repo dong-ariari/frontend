@@ -6,18 +6,27 @@ export const Layer = styled.div`
   gap: 0.75rem;
 `;
 
-export const Head = styled.div`
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  background-color: ${(props) => props.theme.color.grey._100};
+  border: solid 0.063rem ${(props) => props.theme.color.grey._200};
+  border-radius: 0.5rem;
+
+`;
+
+export const Head = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0.375rem 0.75rem;
-  border-radius: 0.5rem;
   border: solid 0.063rem
     ${(props) => {
       return props.$active === true
-        ? props.theme.color.grey._600
+        ? props.theme.color.grey._0
         : props.theme.color.grey._200;
     }};
+  border-radius: 0.5rem;
   background-color: ${(props) => {
     return props.$active === true
       ? props.theme.color.grey._0
@@ -35,12 +44,12 @@ export const Head = styled.div`
       : props.theme.typo.fontWeight._500};
 `;
 
-export const Icon = styled.img`
-//   border: solid 1px black;
-`;
-
-export const Container = styled.div`
+export const Spread = styled.div`
   display: flex;
+  height: 2.25rem;
+  justify-content: start;
   align-items: center;
-  gap: 1rem;
+  padding-left: 1rem;
+  color: ${(props) => props.theme.color.grey._600};
+  ${(props) => props.theme.typo.fontSize._7};
 `;

@@ -1,7 +1,3 @@
-export const DROPDOWN_DATA = {
-  depart: null,
-  major: null,
-};
 export const DUMMY_SPREAD = {
   depart: [
     { id: 0, text: "사회과학대학" },
