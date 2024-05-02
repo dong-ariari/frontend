@@ -41,7 +41,11 @@ export default function DropDown() {
     <S.Layer>
       <div>
         <S.Container>
-          <S.Head $active={true} onClick={() => handleDepartSpread()}>
+          <S.Head
+            $isOpen={isOpen.depart}
+            $active={true}
+            onClick={() => handleDepartSpread()}
+          >
             <span>
               {selected.depart === null
                 ? "단과대학을 선택해주세요"
@@ -62,6 +66,7 @@ export default function DropDown() {
       <div>
         <S.Container>
           <S.Head
+            $isOpen={isOpen.depart}
             $active={selected.depart !== null}
             onClick={() => handleMajorSpread()}
           >

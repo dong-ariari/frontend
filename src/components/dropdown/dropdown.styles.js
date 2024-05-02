@@ -29,9 +29,11 @@ export const Head = styled.button`
   padding: 0.375rem 0.75rem;
   border: solid 0.063rem
     ${(props) => {
-      return props.$active === true
+      return props.$active === false
         ? props.theme.color.grey._0
-        : props.theme.color.grey._200;
+        : props.$isOpen
+        ? props.theme.color.grey._200
+        : props.theme.color.grey._700;
     }};
   border-radius: 0.5rem;
   background-color: ${(props) => {
