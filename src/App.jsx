@@ -7,6 +7,8 @@ import Oncampus from "./pages/oncampus";
 import Offcampus from "./pages/offcampus";
 import ChipsComponent from "./components/chips/chipsComponent";
 import { CHIPS_DATA } from "./data/components/chips";
+import SortTag from "./components/button/sortTag";
+import {SORT_TAG_DATA} from './data/components/sortTag'; 
 
 // default theme 사용법
 const Test = styled.div`
@@ -21,7 +23,7 @@ function App() {
     <Router>
       <GlobalStyle />
       <ThemeProvider theme={DefaultTheme}>
-        <ChipsComponent data={CHIPS_DATA} />
+        <SortTag data={SORT_TAG_DATA} />
         <Routes>
           <Route path="/" element={<Test>Hello World</Test>} />
           <Route path="/all" element={<All />} />
