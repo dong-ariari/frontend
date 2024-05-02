@@ -29,6 +29,7 @@ export const StyledInput = styled.input`
   border-radius: 0.5rem;
   width: 27.75rem;
   padding-left: 1rem;
+  padding-right: 1rem;
   padding-top: 0.75rem;
   padding-bottom: 0.6875rem;
   ${(props) => props.theme.typo.fontSize._7};
