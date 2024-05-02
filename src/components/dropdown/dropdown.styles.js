@@ -6,7 +6,7 @@ export const Layer = styled.div`
   gap: 0.75rem;
 `;
 
-export const Container = styled.div`
+export const Head = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,6 +35,12 @@ export const Container = styled.div`
       : props.theme.typo.fontWeight._500};
 `;
 
+export const Icon = styled.img`
+//   border: solid 1px black;
+`;
 
-export const Head = styled.div``;
-
+export const Container = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+`;

@@ -8,7 +8,8 @@ import Offcampus from "./pages/offcampus";
 import ChipsComponent from "./components/chips/chipsComponent";
 import { CHIPS_DATA } from "./data/components/chips";
 import DropDown from "./components/dropdown/dropdown";
-import { DROPDOWN_DATA } from "./data/components/dropdown";
+
+
 
 // default theme 사용법
 const Test = styled.div`
@@ -23,7 +24,7 @@ function App() {
     <Router>
       <GlobalStyle />
       <ThemeProvider theme={DefaultTheme}>
-        <DropDown data={DROPDOWN_DATA} />
+        <DropDown />
         <Routes>
           <Route path="/" element={<Test>Hello World</Test>} />
           <Route path="/all" element={<All />} />
