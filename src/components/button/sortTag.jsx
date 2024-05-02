@@ -9,10 +9,11 @@ export default function SortTag({ data }) {
       select: id === item.id,
     }));
     setSortTagData(updatedData);
+    console.log(sortTagData);
   }
   return (
     <S.Layer>
-      {data.map((item) => (
+      {sortTagData.map((item) => (
         <S.Container
           onClick={() => handleSelected(item.id)}
           $select={item.select}

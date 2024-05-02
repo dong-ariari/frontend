@@ -6,7 +6,6 @@ flex-direction: row;
 gap: 0.75rem; 
 `
 
-
 export const Container = styled.div`
   display: flex;
   justify-content: center;
@@ -29,5 +28,5 @@ export const Container = styled.div`
       : props.theme.color.grey._400;
   }};
   ${(props) => props.theme.typo.fontSize._6};
-  ${(props) => props.theme.typo.fontWeight._600};
+  ${(props) => props.$select ? props.theme.typo.fontWeight._600 : props.theme.typo.fontWeight._500};
 `;
