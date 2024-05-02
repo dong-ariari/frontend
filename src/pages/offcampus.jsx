@@ -19,6 +19,7 @@ const Offcampus = () => {
           title={"소개글"}
           placeholder={"소개하고 싶은 내용을 입력해주세요"}
           isEdit={true}
+          max={500}
         />
       </div>
     </>
