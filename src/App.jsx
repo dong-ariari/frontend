@@ -22,7 +22,7 @@ function App() {
     <Router>
       <GlobalStyle />
       <ThemeProvider theme={DefaultTheme}>
-        <Header userName='User_name#Number' />
+        <Header userName='User_name#Number' hasAlert='true' />
         <ChipsComponenet data={CHIPS_DATA} />
         <Routes>
           <Route path="/" element={<Test>Hello World</Test>} />

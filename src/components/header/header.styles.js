@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const Layer = styled.div`
-  display: flex; 
+  display: flex;
   justify-content: center;
   background-color: #9bf22c;
-`
+`;
 export const Container = styled.div`
   display: flex;
   flex-direction: row;
@@ -69,4 +69,15 @@ export const LinkBox = styled.div`
 export const Link = styled.a`
   color: ${(props) => props.theme.color.grey._700};
   padding: 0.625rem;
+  position: relative;
+`;
+
+export const Alert = styled.div`
+  background-color: #ff3030;
+  width: 0.25rem;
+  height: 0.25rem;
+  border-radius: 100%; 
+  position: absolute; 
+  top: 0.438rem; 
+  right: 0;
 `;
