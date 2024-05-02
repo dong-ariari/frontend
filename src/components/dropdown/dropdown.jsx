@@ -66,7 +66,7 @@ export default function DropDown() {
       <div>
         <S.Container>
           <S.Head
-            $isOpen={isOpen.depart}
+            $isOpen={isOpen.major}
             $active={selected.depart !== null}
             onClick={() => handleMajorSpread()}
           >
