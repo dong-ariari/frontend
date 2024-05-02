@@ -1,13 +1,16 @@
 import React, { useState } from "react";
-import * as S from "./textarea.styels";
+import * as S from "./textarea.styles";
 
-const Textarea = ({ title, placeholder, isEdit }) => {
+const Textarea = ({ title, placeholder, isEdit, max, onValueChange }) => {
   const [value, setValue] = useState("");
 
   const handleChange = (e) => {
-    console.log("Input value:", e.target.value);
-    if (e.target.value.length <= 500) {
-      setValue(e.target.value);
+    const newValue = e.target.value;
+    if (!max || newValue.length <= max) {
+      setValue(newValue);
+      if (onValueChange) {
+        onValueChange(newValue);
+      }
     }
   };
 
@@ -21,11 +24,13 @@ const Textarea = ({ title, placeholder, isEdit }) => {
           onChange={handleChange}
           readOnly={!isEdit}
           isEditable={isEdit}
-          maxLength="500"
+          maxLength={max || undefined}
         />
-        <S.CharCounter textLength={value.length}>
-          {value.length} &nbsp;<S.Counter>/ 500</S.Counter>
-        </S.CharCounter>
+        {max && (
+          <S.CharCounter textLength={value.length}>
+            {value.length} &nbsp;<S.Counter>/ {max}</S.Counter>
+          </S.CharCounter>
+        )}
       </S.TextAreaContainer>
     </S.TextContainer>
   );
