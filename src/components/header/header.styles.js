@@ -1,12 +1,16 @@
 import styled from "styled-components";
 
+export const Layer = styled.div`
+  display: flex; 
+  justify-content: center;
+  background-color: #9bf22c;
+`
 export const Container = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
   height: 5rem;
-  padding: 0 13.125rem;
-  background-color: #9bf22c;
+  width: 90rem;
   justify-content: space-between;
 `;
 
