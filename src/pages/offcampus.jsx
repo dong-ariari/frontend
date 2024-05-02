@@ -25,6 +25,7 @@ const Offcampus = () => {
           title={"모집 현황"}
           btnContent1={"모집 중"}
           btnContent2={"모집 완료"}
+          onToggle={() => {}}
         />
       </div>
     </>
