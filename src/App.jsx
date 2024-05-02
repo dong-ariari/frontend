@@ -7,6 +7,7 @@ import Oncampus from "./pages/oncampus";
 import Offcampus from "./pages/offcampus";
 import ChipsComponent from "./components/chips/chipsComponent";
 import { CHIPS_DATA } from "./data/components/chips";
+import Search from "./components/search/search";
 
 // default theme 사용법
 const Test = styled.div`
@@ -21,7 +22,7 @@ function App() {
     <Router>
       <GlobalStyle />
       <ThemeProvider theme={DefaultTheme}>
-        <ChipsComponent data={CHIPS_DATA} />
+        <Search />
         <Routes>
           <Route path="/" element={<Test>Hello World</Test>} />
           <Route path="/all" element={<All />} />
