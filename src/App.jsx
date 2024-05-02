@@ -7,8 +7,10 @@ import All from "./pages/all";
 import Campus from "./pages/oncampus";
 import Suburbs from "./pages/offcampus";
 import { CHIPS_DATA } from "./data/components/chips";
-import Header from "./components/header/header";
-
+import Header from "./components/header/header.jsx";
+import Mypage from "./pages/mypage";
+import Notification from "./pages/notification";
+import dummy from "./assets/images/logo.png";
 // default theme 사용법
 const Test = styled.div`
   background-color: ${(props) => props.theme.color.grey._700};
@@ -22,13 +24,20 @@ function App() {
     <Router>
       <GlobalStyle />
       <ThemeProvider theme={DefaultTheme}>
-        <Header userName='User_name#Number' hasAlert='true' />
+        <Header
+          img={dummy}
+          hasAlert="true"
+          isLogedIn="true"
+          userName="User_name#Number"
+        />
         <ChipsComponenet data={CHIPS_DATA} />
         <Routes>
           <Route path="/" element={<Test>Hello World</Test>} />
           <Route path="/all" element={<All />} />
           <Route path="/campus" element={<Campus />} />
           <Route path="/suburbs" element={<Suburbs />} />
+          <Route path="/mypage" element={<Mypage />} />
+          <Route path="/notification" element={<Notification />} />
         </Routes>
       </ThemeProvider>
     </Router>
