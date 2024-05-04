@@ -8,6 +8,7 @@ gap: 0.75rem;
 
 export const Container = styled.div`
   display: flex;
+  cursor: pointer;
   justify-content: center;
   align-items: center;
   padding: 0.375rem 0.75rem; 
