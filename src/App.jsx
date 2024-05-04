@@ -7,7 +7,7 @@ import Oncampus from "./pages/oncampus";
 import Offcampus from "./pages/offcampus";
 import ChipsComponent from "./components/chips/chipsComponent";
 import { CHIPS_DATA } from "./data/components/chips";
-import SortTag from "./components/button/sortTag";
+import SortTag from "./components/tag/sortTag";
 import {SORT_TAG_DATA} from './data/components/sortTag'; 
 
 // default theme 사용법
