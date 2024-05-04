@@ -17,7 +17,7 @@ export default function DropdownComponents() {
     selected: null,
   });
   const [majorState, setMajorState] = useState({
-    isActive: false,
+    active: false,
     isOpen: false,
     selected: null,
   });
@@ -27,18 +27,34 @@ export default function DropdownComponents() {
     setDepartSpread(DUMMY_DEPART);
   }, []);
 
-  function handleDepartSpread() {}
-  function handleMajorSpread(departId) {
+  function handleDepartSpread() {
+    const updated = { ...departState, isOpen: !departState.isOpen };
+    setDepartState(updated); 
+  }
+  function handleMajorSpread() {
     // API: GET(departId) major data
-    if (departId === 0) {
+    if (departState.selected.id === 0) {
       setMajorSpread(DUMMY_MAJOR0);
     } else if (departId == 1) {
       setMajorSpread(DUMMY_MAJOR1);
     }
+
+    const updated = {...majorState, isOpen: !majorState.isOpen}; 
+    setMajorState(updated);
   }
 
-  function handleDepartSelect() {}
-  function handleMajorSelect() {}
+  function handleDepartSelect(item) {
+    const updatedDepart = {...departState, selected: item, isOpen: false};
+    setDepartState(updatedDepart);  
+
+    const updatedMajor = {...majorState, active: true}; 
+    setMajorState(updatedMajor);
+  }
+  function handleMajorSelect(item) {
+    const updated = {...majorState, selected: item, isOpen: false}; 
+    setMajorState(updated); 
+
+  }
 
   return (
     <S.Layer>
@@ -46,16 +62,13 @@ export default function DropdownComponents() {
         title={"단과대학을 선택해주세요"}
         handleSpread={handleDepartSpread}
         handleSelect={(item) => handleDepartSelect(item)}
-        
         state={departState}
-
         spreadData={departSpread}
       />
       <DropDown
         title={"학과를 선택해주세요"}
         handleSpread={handleMajorSpread}
         handleSelect={(item) => handleMajorSelect(item)}
-        
         state={majorState}
         spreadData={majorSpread}
       />
