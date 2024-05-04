@@ -5,21 +5,23 @@ import dropBtnA from "../../assets/icons/dropBtn-a.png";
 export default function DropDown({
   title,
   handleSpread,
-  isOpen,
-  selected,
+  handleSelect,
   spreadData,
-  active, 
-  handleSelect
+  state,
 }) {
   return (
     <S.Container>
-      <S.Head $active={active} $isOpen={isOpen} onClick={handleSpread}>
-        <span>{selected === null ? title : selected.text}</span>
+      <S.Head
+        $active={state.active}
+        $isOpen={state.isOpen}
+        onClick={handleSpread}
+      >
+        <span>{state.selected === null ? title : state.selected.text}</span>
         <img src={dropBtnA} />
       </S.Head>
 
       {spreadData &&
-        isOpen &&
+        state.isOpen &&
         spreadData.map((item) => (
           <S.Spread onClick={() => handleSelect(item)} key={item.id}>
             {item.text}
