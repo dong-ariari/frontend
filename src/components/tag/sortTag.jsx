@@ -8,7 +8,7 @@ export default function SortTag({ data, onSelectChange }) {
     const updatedData = sortTagData.map((item) => ({
       
       ...item,
-      select: id === item.id,
+      select: id === item.id ? true: item.select,
     }));
     setSortTagData(updatedData);
     onSelectChange(updatedData); 
