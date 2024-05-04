@@ -15,6 +15,7 @@ export const Input = styled.input`
   margin-bottom: 0.375rem;
   outline: none;
   box-shadow: none;
+  color: ${props => props.theme.color.grey._700};
   ${(props) => props.theme.typo.fontSize._3};
   ${(props) => props.theme.typo.fontWeight._500};
 `;
