@@ -22,7 +22,10 @@ function App() {
     <Router>
       <GlobalStyle />
       <ThemeProvider theme={DefaultTheme}>
-        <Search placeholder="관심있는 동아리를 찾을 수 있어요" />
+        <Search
+          placeholder="관심있는 동아리를 찾을 수 있어요"
+          onSearch={(val) => {}}
+        />
         <Routes>
           <Route path="/" element={<Test>Hello World</Test>} />
           <Route path="/all" element={<All />} />
