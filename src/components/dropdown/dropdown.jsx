@@ -8,7 +8,8 @@ export default function DropDown({
   isOpen,
   selected,
   spreadData,
-  active
+  active, 
+  handleSelect
 }) {
   return (
     <S.Container>
@@ -20,7 +21,7 @@ export default function DropDown({
       {spreadData &&
         isOpen &&
         spreadData.map((item) => (
-          <S.Spread onClick={() => handleDepartSelect(item)} key={item.id}>
+          <S.Spread onClick={() => handleSelect(item)} key={item.id}>
             {item.text}
           </S.Spread>
         ))}

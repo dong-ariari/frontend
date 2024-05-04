@@ -7,7 +7,7 @@ import { DUMMY_DEPART, DUMMY_MAJOR0, DUMMY_MAJOR1 } from "../../data/dummy/dropd
 export default function DropdownComponents() {
     const [departSpread, setDepartSpread] = useState(); 
     const [majorSpread, setMajorSpread] = useState(); 
-    
+
     const [departState, setDepartState] = useState({isActive: true, isOpen: false}); 
     const [majorState, setMajorState] = useState({isActive: false, isOpen: false}); 
 
@@ -26,12 +26,19 @@ export default function DropdownComponents() {
     }
     
   }
+
+  function handleDepartSelect(){}; 
+  function handleMajorSelect(){}; 
+
+  
   return (
     <S.Layer>
       <DropDown
         title={"단과대학을 선택해주세요"}
 
         handleSpread={handleDepartSpread}
+        handleSelect={handleDepartSelect}
+
         active={departState.isActive}
         isOpen={departState.isOpen}
         
@@ -43,6 +50,8 @@ export default function DropdownComponents() {
         title={"학과를 선택해주세요"}
 
         handleSpread={handleMajorSpread}
+        handleSelect={handleMajorSelect}
+
         active={majorState.isActive}
         isOpen={()=>{}}
 
