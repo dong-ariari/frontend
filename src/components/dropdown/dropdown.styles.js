@@ -19,6 +19,7 @@ export const Container = styled.div`
   background-color: ${(props) => props.theme.color.grey._100};
   border: solid 0.063rem ${(props) => props.theme.color.grey._200};
   border-radius: 0.5rem;
+  height: fit-content;
 `;
 
 export const Head = styled.button`

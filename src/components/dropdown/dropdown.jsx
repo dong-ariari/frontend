@@ -9,7 +9,6 @@ export default function DropDown({
   spreadData,
   state,
 }) {
-  console.log(state);
   return (
     <S.Container>
       <S.Head

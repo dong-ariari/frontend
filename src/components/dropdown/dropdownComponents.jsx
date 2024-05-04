@@ -8,9 +8,11 @@ import {
 } from "../../data/dummy/dropdown";
 
 export default function DropdownComponents() {
+  // API로 받아오는 대학, 학과 데이터들
   const [departSpread, setDepartSpread] = useState();
   const [majorSpread, setMajorSpread] = useState();
 
+  // dropDown 활성화 여부, 열렸는지, 선택된 아이템 정보
   const [departState, setDepartState] = useState({
     active: true,
     isOpen: false,
@@ -29,7 +31,7 @@ export default function DropdownComponents() {
 
   function handleDepartSpread() {
     const updated = { ...departState, isOpen: !departState.isOpen };
-    setDepartState(updated); 
+    setDepartState(updated);
   }
   function handleMajorSpread() {
     // API: GET(departId) major data
@@ -39,21 +41,20 @@ export default function DropdownComponents() {
       setMajorSpread(DUMMY_MAJOR1);
     }
 
-    const updated = {...majorState, isOpen: !majorState.isOpen}; 
+    const updated = { ...majorState, isOpen: !majorState.isOpen };
     setMajorState(updated);
   }
 
   function handleDepartSelect(item) {
-    const updatedDepart = {...departState, selected: item, isOpen: false};
-    setDepartState(updatedDepart);  
+    const updatedDepart = { ...departState, selected: item, isOpen: false };
+    setDepartState(updatedDepart);
 
-    const updatedMajor = {...majorState, active: true}; 
+    const updatedMajor = { ...majorState, active: true };
     setMajorState(updatedMajor);
   }
   function handleMajorSelect(item) {
-    const updated = {...majorState, selected: item, isOpen: false}; 
-    setMajorState(updated); 
-
+    const updated = { ...majorState, selected: item, isOpen: false };
+    setMajorState(updated);
   }
 
   return (
