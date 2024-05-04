@@ -6,18 +6,12 @@ export const Layer = styled.div`
   gap: 0.75rem;
 `;
 
-export const Depart = styled.div`
-  display: flex;
-  flex-direction: column;
-  background-color: ${(props) => props.theme.color.grey._100};
-  border: solid 0.063rem ${(props) => props.theme.color.grey._200};
-  border-radius: 0.5rem;
-`;
+
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   background-color: ${(props) => props.theme.color.grey._100};
-  border: solid 0.063rem ${(props) => props.theme.color.grey._200};
+  // border: solid 0.063rem ${(props) => props.theme.color.grey._200};
   border-radius: 0.5rem;
   height: fit-content;
 `;

@@ -37,7 +37,7 @@ export default function DropdownComponents() {
     // API: GET(departId) major data
     if (departState.selected.id === 0) {
       setMajorSpread(DUMMY_MAJOR0);
-    } else if (departId == 1) {
+    } else if (departState.selected.id == 1) {
       setMajorSpread(DUMMY_MAJOR1);
     }
 
@@ -49,8 +49,9 @@ export default function DropdownComponents() {
     const updatedDepart = { ...departState, selected: item, isOpen: false };
     setDepartState(updatedDepart);
 
-    const updatedMajor = { ...majorState, active: true };
+    const updatedMajor = { ...majorState, active: true, selected: null };
     setMajorState(updatedMajor);
+    setMajorSpread(null);
   }
   function handleMajorSelect(item) {
     const updated = { ...majorState, selected: item, isOpen: false };
