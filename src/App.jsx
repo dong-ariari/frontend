@@ -8,6 +8,7 @@ import Offcampus from "./pages/offcampus";
 import ChipsComponent from "./components/chips/chipsComponent";
 import { CHIPS_DATA } from "./data/components/chips";
 import { Alert } from "./components/alert/alert";
+import { DUMMY_ALERT } from "./data/dummy/alert";
 
 // default theme 사용법
 const Test = styled.div`
@@ -22,7 +23,9 @@ function App() {
     <Router>
       <GlobalStyle />
       <ThemeProvider theme={DefaultTheme}>
-        <Alert />
+        <div style={{backgroundColor: 'pink'}}>
+        <Alert data={DUMMY_ALERT} />
+        </div>
         <Routes>
           <Route path="/" element={<Test>Hello World</Test>} />
           <Route path="/all" element={<All />} />
