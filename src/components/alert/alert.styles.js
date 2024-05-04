@@ -1,15 +1,22 @@
 import styled from "styled-components";
 
 export const Layer = styled.div`
-  background-color: rgba(255, 255, 255, 0.9);
   display: flex;
   flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  background: transparent;
 `;
 export const Triangle = styled.div`
-
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 0 13px 13px 13px;
+  border-color: transparent transparent rgba(255, 255, 255, 0.9) transparent;
 `;
 
 export const Container = styled.div`
+  background-color: rgba(255, 255, 255, 0.9);
   width: 15rem;
   border-radius: 1rem;
   padding: 1rem 0;
