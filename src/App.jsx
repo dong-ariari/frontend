@@ -8,6 +8,7 @@ import Offcampus from "./pages/offcampus";
 import ChipsComponent from "./components/chips/chipsComponent";
 import { CHIPS_DATA } from "./data/components/chips";
 import DropDown from "./components/dropdown/dropdown";
+import DropdownComponents from "./components/dropdown/dropdownComponents";
 
 
 
@@ -24,7 +25,7 @@ function App() {
     <Router>
       <GlobalStyle />
       <ThemeProvider theme={DefaultTheme}>
-        <DropDown />
+        <DropdownComponents />
         <Routes>
           <Route path="/" element={<Test>Hello World</Test>} />
           <Route path="/all" element={<All />} />
