@@ -19,6 +19,13 @@ export const Input = styled.input`
   color: ${props => props.theme.color.grey._700};
   ${(props) => props.theme.typo.fontSize._3};
   ${(props) => props.theme.typo.fontWeight._500};
+  &::placeholder{
+    color: ${props => props.theme.color.grey._400};
+    opacity: 1;
+  }
+  &::-ms-input-placeholder { 
+    color: ${props => props.theme.color.grey._400};
+  }
 `;
 
 export const Button = styled.button`
