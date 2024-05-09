@@ -17,17 +17,18 @@ export default function DropDown({
         onClick={handleSpread}
       >
         <span>{state.selected === null ? title : state.selected.text}</span>
-        
+
         <img src={state.active ? dropBtnA : dropBtn} />
       </S.Head>
-
-      {spreadData &&
-        state.isOpen &&
-        spreadData.map((item) => (
-          <S.Spread onClick={() => handleSelect(item)} key={item.id}>
-            {item.text}
-          </S.Spread>
-        ))}
+      <S.Dropdown>
+        {spreadData &&
+          state.isOpen &&
+          spreadData.map((item) => (
+            <S.Spread onClick={() => handleSelect(item)} key={item.id}>
+              {item.text}
+            </S.Spread>
+          ))}
+      </S.Dropdown>
     </S.Container>
   );
 }

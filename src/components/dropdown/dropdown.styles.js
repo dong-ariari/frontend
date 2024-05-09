@@ -6,7 +6,6 @@ export const Layer = styled.div`
   gap: 0.75rem;
 `;
 
-
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -14,9 +13,12 @@ export const Container = styled.div`
   // border: solid 0.063rem ${(props) => props.theme.color.grey._200};
   border-radius: 0.5rem;
   height: fit-content;
+  position: relative;
+  
 `;
 
 export const Head = styled.button`
+z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -46,6 +48,15 @@ export const Head = styled.button`
     props.$active
       ? props.theme.typo.fontWeight._600
       : props.theme.typo.fontWeight._500};
+`;
+
+export const Dropdown = styled.div`
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding-top: 38px;
+  background-color: ${(props) => props.theme.color.grey._100};
+  border-radius: 0.5rem;
 `;
 
 export const Spread = styled.div`
