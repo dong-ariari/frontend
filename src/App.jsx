@@ -26,8 +26,8 @@ function App() {
       <ThemeProvider theme={DefaultTheme}>
         <Header
           img={dummy}
-          hasAlert="true"
-          isLogedIn="true"
+          hasAlert={true}
+          isLogedIn={false}
           userName="User_name#Number"
           onLoginStateChange={()=>{}}
         />
