@@ -37,6 +37,7 @@ export const Title = styled.div`
   flex-direction: row;
   align-items: end;
   gap: 0.3rem;
+  cursor: pointer;
 `;
 
 export const Eng = styled.h1`
@@ -53,6 +54,7 @@ export const Profile = styled.div`
   flex-direction: row;
   align-items: center;
   gap: 0.5rem;
+  cursor: pointer;
 `;
 export const UserName = styled.div`
   ${(props) => props.theme.typo.fontSize._7};
@@ -70,6 +72,7 @@ export const Link = styled.a`
   color: ${(props) => props.theme.color.grey._700};
   padding: 0.625rem;
   position: relative;
+  cursor: pointer;
 `;
 
 export const Alert = styled.div`
