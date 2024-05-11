@@ -3,8 +3,9 @@ import triangle from '../../assets/images/triangle.svg';
 
 
 export function Alert({ data }) {
-  function handleClick() {
+  function handleClick(id) {
     // mote to its reference
+    console.log(id);
   }
   return (
     <S.Layer>
