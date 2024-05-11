@@ -6,6 +6,7 @@ export const Layer = styled.div`
   align-items: center;
   width: fit-content;
   background: transparent;
+  position: absolute;
 `;
 export const Container = styled.div`
   margin-top: -0.031rem;
