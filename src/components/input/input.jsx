@@ -20,7 +20,7 @@ const Input = ({ title, placeholder, isEdit, onValueChange }) => {
         value={value}
         onChange={handleChange}
         readOnly={!isEdit}
-        isEditable={isEdit}
+        data-iseditable={isEdit}
       />
     </S.InputContainer>
   );
