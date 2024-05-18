@@ -23,7 +23,7 @@ const Textarea = ({ title, placeholder, isEdit, max, onValueChange }) => {
           value={value}
           onChange={handleChange}
           readOnly={!isEdit}
-          isEditable={isEdit}
+          data-iseditable={isEdit}
           maxLength={max || undefined}
         />
         {max && (

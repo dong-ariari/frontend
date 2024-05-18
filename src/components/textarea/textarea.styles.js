@@ -24,9 +24,11 @@ export const TextAreaContainer = styled.div`
 
 export const Textarea = styled.textarea`
   background-color: ${(props) =>
-    props.isEditable ? props.theme.color.grey._0 : props.theme.color.grey._200};
+    props["data-iseditable"]
+      ? props.theme.color.grey._0
+      : props.theme.color.grey._200};
   border-color: ${(props) =>
-    props.isEditable
+    props["data-iseditable"]
       ? props.theme.color.grey._100
       : props.theme.color.grey._200};
   border-width: 0.0625rem;
@@ -41,14 +43,14 @@ export const Textarea = styled.textarea`
 
   &::placeholder {
     color: ${(props) =>
-      props.isEditable
+      props["data-iseditable"]
         ? props.theme.color.grey._400
         : props.theme.color.grey._500};
   }
 
   &:focus {
     border-color: ${(props) =>
-      props.isEditable
+      props["data-iseditable"]
         ? props.theme.color.blue._400
         : props.theme.color.grey._200};
     outline: none;
