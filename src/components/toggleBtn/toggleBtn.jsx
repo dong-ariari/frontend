@@ -23,10 +23,10 @@ const ToggleBtn = ({ title, btnContent1, btnContent2, onToggle }) => {
       <S.Title>{title}</S.Title>
       <S.BtnContainer>
         <S.BtnSection>
-          <S.Btn onClick={handleBtn1Click} active={isSelected}>
+          <S.Btn onClick={handleBtn1Click} $active={isSelected}>
             {btnContent1}
           </S.Btn>
-          <S.Btn onClick={handleBtn2Click} active={!isSelected}>
+          <S.Btn onClick={handleBtn2Click} $active={!isSelected}>
             {btnContent2}
           </S.Btn>
         </S.BtnSection>
