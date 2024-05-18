@@ -8,7 +8,7 @@ export const TextContainer = styled.div`
   justify-content: space-between;
 `;
 
-export const Title = styled.p`
+export const Title = styled.div`
   min-width: 6.25rem;
   color: ${(props) => props.theme.color.grey._500};
   ${(props) => props.theme.typo.fontSize._6};
@@ -55,13 +55,13 @@ export const Textarea = styled.textarea`
   }
 `;
 
-export const Counter = styled.p`
+export const Counter = styled.div`
   ${(props) => props.theme.typo.fontSize._9};
   ${(props) => props.theme.typo.fontWeight._400};
   color: ${(props) => props.theme.color.grey._400};
 `;
 
-export const CharCounter = styled.p`
+export const CharCounter = styled.div`
   position: absolute;
   display: flex;
   right: 1rem;
