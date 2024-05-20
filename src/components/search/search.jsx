@@ -1,5 +1,5 @@
 import * as S from "./search.styles";
-import btn from "../../assets/icons/searchBtn.png";
+import btn from "../../assets/icons/searchBtn.svg";
 
 export default function Search({placeholder, onSearch}) {
   function handleSubmit(e) {
