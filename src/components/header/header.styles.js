@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Layer = styled.div`
   display: flex;
   justify-content: center;
-  background-color: #9bf22c;
+  background-color: #FFD7FF;
 `;
 export const Container = styled.div`
   display: flex;
