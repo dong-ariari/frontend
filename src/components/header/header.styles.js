@@ -4,6 +4,7 @@ export const Layer = styled.div`
   display: flex;
   justify-content: center;
   background-color: #FFD7FF;
+  user-select: none;
 `;
 export const Container = styled.div`
   display: flex;

@@ -9,6 +9,14 @@ export default function Header({ img, userName, hasAlert, isLogedIn, onLoginStat
     navigate(uri);
   }
 
+  function handleLoginState(){
+    if (isLogedIn){
+      onLoginStateChange(false)
+    }else{
+      onLoginStateChange(true); 
+    }
+  }
+
   return (
     <S.Layer>
       <S.Container>
@@ -32,7 +40,7 @@ export default function Header({ img, userName, hasAlert, isLogedIn, onLoginStat
             {hasAlert && <S.Alert />}
           </S.Link>
           <S.Link onClick={() => handleNavigate("/mypage")}>마이페이지</S.Link>
-          <S.Link onClick={onLoginStateChange}>
+          <S.Link onClick={handleLoginState}>
             {isLogedIn ? "로그아웃" : "로그인"}
           </S.Link>
         </S.LinkBox>

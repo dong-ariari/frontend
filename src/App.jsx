@@ -29,7 +29,7 @@ function App() {
           hasAlert={true}
           isLogedIn={false}
           userName="User_name#Number"
-          onLoginStateChange={()=>{}}
+          onLoginStateChange={(bool)=>{}}
         />
         <ChipsComponenet data={CHIPS_DATA} />
         <Routes>
