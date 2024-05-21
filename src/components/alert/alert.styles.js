@@ -7,6 +7,8 @@ export const Layer = styled.div`
   width: fit-content;
   background: transparent;
   position: absolute;
+  cursor: pointer;
+  user-select: none;
 `;
 export const Container = styled.div`
   margin-top: -0.031rem;
