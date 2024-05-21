@@ -23,7 +23,6 @@ z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 14.125rem;
   padding: 0.375rem 0.75rem;
   border: solid 0.063rem
     ${(props) => {
