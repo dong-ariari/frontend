@@ -20,3 +20,12 @@ export const DUMMY_MAJOR1 = [
   { id: 6, text: "예술학과" },
   { id: 7, text: "예술경영학과" },
 ];
+
+export const DUMMY_CENTRAL = [
+  { id: 0, text: "스포츠 활동" },
+  { id: 1, text: "학술 활동" },
+  { id: 2, text: "창작 활동" },
+  { id: 3, text: "외국어 회화" },
+  { id: 4, text: "IT 개발・창업" },
+  { id: 5, text: "봉사 활동" },
+];
