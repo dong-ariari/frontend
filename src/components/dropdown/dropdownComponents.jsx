@@ -35,6 +35,8 @@ export default function DropdownComponents() {
   }
   function handleMajorSpread() {
     // API: GET(departId) major data
+    if (departState.selected === null){return}
+
     if (departState.selected.id === 0) {
       setMajorSpread(DUMMY_MAJOR0);
     } else if (departState.selected.id == 1) {

@@ -14,6 +14,7 @@ export const Container = styled.div`
   border-radius: 0.5rem;
   height: fit-content;
   position: relative;
+  cursor: pointer;
   
 `;
 
