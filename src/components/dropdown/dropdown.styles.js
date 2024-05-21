@@ -15,10 +15,10 @@ export const Container = styled.div`
   height: fit-content;
   position: relative;
   cursor: pointer;
-  
 `;
 
 export const Head = styled.button`
+cursor: pointer;
 z-index: 10;
   display: flex;
   justify-content: space-between;
