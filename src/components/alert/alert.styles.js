@@ -21,6 +21,13 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  &:last-child {
+    div:last-child{
+      div:last-child{
+        border: none;
+      }
+    }
+  }
 `;
 
 export const Item = styled.div`
