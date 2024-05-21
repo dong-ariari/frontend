@@ -9,6 +9,8 @@ export const Layer = styled.div`
   position: absolute;
   cursor: pointer;
   user-select: none;
+  box-shadow: 0px 15px 50px 0px rgba(36, 36, 36, 0.15);
+
 `;
 export const Container = styled.div`
   margin-top: -0.031rem;
