@@ -7,14 +7,14 @@ export default function Search({placeholder, onSearch}) {
     onSearch(e.target[0].value); 
   }
 
-  function handleKeyDwon(e){
+  function handleEnter(e){
     if (e.key === 'Enter'){
       onSearch(e.target.value); 
     }
   }
   return (
-    <S.Container onSubmit={handleSubmit}>
-      <S.Input type="text" placeholder={placeholder} onKeyDown={handleKeyDwon} />
+    <S.Container onSubmit={handleSubmit} onChange={handleEnter}>
+      <S.Input type="text" placeholder={placeholder} />
       <S.Button type="submit" $url={btn}></S.Button>
     </S.Container>
   );

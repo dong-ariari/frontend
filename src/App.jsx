@@ -24,7 +24,7 @@ function App() {
       <ThemeProvider theme={DefaultTheme}>
         <Search
           placeholder="관심있는 동아리를 찾을 수 있어요"
-          onSearch={(val) => {}}
+          onSearch={(val) => {console.log(val)}}
         />
         <Routes>
           <Route path="/" element={<Test>Hello World</Test>} />
