@@ -9,11 +9,12 @@ export const Layer = styled.div`
   position: absolute;
   cursor: pointer;
   user-select: none;
-  box-shadow: 0px 15px 50px 0px rgba(36, 36, 36, 0.15);
-
+  displaly: border-box;
 `;
+
 export const Container = styled.div`
-  margin-top: -0.031rem;
+  box-shadow: 0px 15px 50px 0px rgba(36, 36, 36, 0.15);
+  margin-top: -0.8px;
   background-color: rgba(255, 255, 255, 0.9);
   width: 15rem;
   border-radius: 1rem;
@@ -24,9 +25,9 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   &:last-child {
-    div:last-child{
-      div:last-child{
-        border: none;
+    div:last-child {
+      div:last-child {
+        border-bottom: none;
       }
     }
   }
