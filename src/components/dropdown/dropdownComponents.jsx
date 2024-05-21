@@ -63,7 +63,7 @@ export default function DropdownComponents() {
   return (
     <S.Layer>
       <DropDown
-        title={"단과대학을 선택해주세요린아ㅓ리나어린아ㅓㄹ"}
+        title={"단과대학을 선택해주세요~~~줄바꿈 현상 방지"}
         handleSpread={handleDepartSpread}
         handleSelect={(item) => handleDepartSelect(item)}
         state={departState}
