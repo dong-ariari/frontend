@@ -12,7 +12,7 @@ export const Layer = styled.button`
   padding-right: 1.375rem;
 `;
 
-export const Placeholder = styled.div`
+export const Placeholder = styled.span`
   border: none;
   flex: 1;
   height: 1.313rem;
@@ -21,4 +21,6 @@ export const Placeholder = styled.div`
   color: ${(props) => props.theme.color.grey._400};
   ${(props) => props.theme.typo.fontSize._7};
   ${(props) => props.theme.typo.fontWeight._500};
+  overflow: hidden;
+  white-space: nowrap;
 `;

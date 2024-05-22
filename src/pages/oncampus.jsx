@@ -24,7 +24,7 @@ const Oncampus = () => {
           onClick={() => {
             console.log("clicked");
           }}
-          text={"세종대학교 발레 동아리"}
+          text={"세종대학교 발레 동아리 place holder가 아주 긴 경우~~"}
         />
       </div>
     </>
