@@ -19,7 +19,7 @@ export const Container = styled.div`
 
 export const Head = styled.button`
 width: ${ props => {
-  return props.$isBig ? '224px' : '193px';
+  return props.$isBig ? '14rem' : '12.063rem';
 }};
 cursor: pointer;
 z-index: 10;
