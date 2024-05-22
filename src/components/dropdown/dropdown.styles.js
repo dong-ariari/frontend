@@ -18,11 +18,11 @@ export const Container = styled.div`
 `;
 
 export const Head = styled.button`
-width: ${ props => {
-  return props.$isBig ? '14rem' : '12.063rem';
-}};
-cursor: pointer;
-z-index: 10;
+  width: ${(props) => {
+    return props.$isBig ? "14rem" : "12.063rem";
+  }};
+  cursor: pointer;
+  z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -46,6 +46,9 @@ z-index: 10;
       ? props.theme.color.grey._700
       : props.theme.color.grey._400;
   }};
+`;
+
+export const Text = styled.span`
   ${(props) => props.theme.typo.fontSize._6};
   ${(props) =>
     props.$active

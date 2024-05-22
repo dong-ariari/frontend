@@ -18,7 +18,7 @@ export default function DropDown({
         $isOpen={state.isOpen}
         onClick={handleSpread}
       >
-        <span>{state.selected === null ? title : state.selected.text}</span>
+        <S.Text>{state.selected === null ? title : state.selected.text}</S.Text>
 
         <img src={state.active ? dropBtnA : dropBtn} />
       </S.Head>
