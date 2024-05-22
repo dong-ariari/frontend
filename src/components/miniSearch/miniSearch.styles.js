@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Layer = styled.button`
   border: none;
   width: 17.625rem;
-  height: 2rem;
+  height: 2.25rem;
   border-radius: 1.25rem;
   background-color: ${(props) => props.theme.color.white};
   display: flex;
