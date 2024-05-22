@@ -18,6 +18,9 @@ export const Container = styled.div`
 `;
 
 export const Head = styled.button`
+width: ${ props => {
+  return props.$isBig ? '224px' : '193px';
+}};
 cursor: pointer;
 z-index: 10;
   display: flex;

@@ -8,10 +8,12 @@ export default function DropDown({
   handleSelect,
   spreadData,
   state,
+  isBig,
 }) {
   return (
     <S.Container>
       <S.Head
+        $isBig={isBig}
         $active={state.active}
         $isOpen={state.isOpen}
         onClick={handleSpread}

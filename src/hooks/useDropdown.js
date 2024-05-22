@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+// 단일 드롭다운 생성
 export const useDropDown = (title, initialActive = true) => {
   const [state, setState] = useState({
     active: initialActive,
@@ -26,19 +27,22 @@ export const useDropDown = (title, initialActive = true) => {
     });
   };
 
+  const isBig = title.length > 11;
+
   return {
     title: title,
     handleSpread,
     handleSelect,
     setSpreadData,
-    setState, 
+    setState,
     state,
     spreadData,
+    isBig,
   };
 };
 
 import { DUMMY_MAJOR0, DUMMY_MAJOR1 } from "../data/dummy/dropdown";
-
+// 연결되어 동작하는 드롭다운에 대한 생성 및 함수 재정의
 export const useDropDown2 = (title, title2) => {
   const dropdown1 = useDropDown(title);
   const dropdown2 = useDropDown(title2, false);
