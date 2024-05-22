@@ -9,6 +9,7 @@ import {
 import { useDropDown, useDropDown2 } from "../hooks/useDropdown";
 
 const Offcampus = () => {
+  // 드롭다운은 전체 탭 선택시 합께 디스플레이 되지 않아 재사용 가능
   const field = useDropDown("분야를 선택해주세요");
   const region = useDropDown("지역을 선택해주세요");
   const { dropdown: depart, dropdown2: major } = useDropDown2(
