@@ -20,7 +20,12 @@ const Oncampus = () => {
           isEdit={true}
         />
 
-        <MiniSearch />
+        <MiniSearch
+          onClick={() => {
+            console.log("clicked");
+          }}
+          text={"세종대학교 발레 동아리"}
+        />
       </div>
     </>
   );
