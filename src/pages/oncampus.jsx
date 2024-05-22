@@ -1,3 +1,4 @@
+import MiniSearch from "../components/miniSearch/miniSearch";
 import Select from "../components/select/select";
 
 const options = [
@@ -18,6 +19,8 @@ const Oncampus = () => {
           options={options}
           isEdit={true}
         />
+
+        <MiniSearch />
       </div>
     </>
   );
