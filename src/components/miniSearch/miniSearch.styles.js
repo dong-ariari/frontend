@@ -8,8 +8,7 @@ export const Layer = styled.button`
   background-color: ${(props) => props.theme.color.white};
   display: flex;
   align-items: center;
-  padding-left: 1.125rem;
-  padding-right: 1.375rem;
+  padding: 0 1.25rem;
 `;
 
 export const Placeholder = styled.span`
