@@ -13,9 +13,19 @@ export const Layer = styled.div`
 `;
 
 export const Container = styled.div`
+  &:after {
+    content: "";
+    position: absolute;
+    top: -8px; /* Adjust the position as needed */
+    width: 19px; 
+    height: 9px; 
+    background-image: url(${(props) => props.$triangle});
+    background-size: cover;
+    background-repeat: no-repeat;
+    // border: solid 1px black;
+  }
   box-shadow: 0px 15px 50px 0px rgba(36, 36, 36, 0.15);
-  margin-top: -0.8px;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: ${props => props.theme.color.white};
   width: 15rem;
   border-radius: 1rem;
   padding: 1rem 0;

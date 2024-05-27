@@ -8,8 +8,7 @@ export function Alert({ data }) {
   }
   return (
     <S.Layer>
-      <img src={triangle} alt="" />
-      <S.Container>
+      <S.Container $triangle={triangle}>
         {data.map((item) => (
           <S.Item onClick={() => handleClick(item.id)} key={item.id}>
             <div>{item.alertType}</div>
