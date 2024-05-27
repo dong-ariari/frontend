@@ -22,15 +22,6 @@ function App() {
     <Router>
       <GlobalStyle />
       <ThemeProvider theme={DefaultTheme}>
-        <div style={{border: 'solid 3px black', padding: '50px'}}>
-          <Search
-            placeholder="관심있는 동아리를 찾을 수 있어요"
-            onSearch={(val) => {
-              console.log(val);
-            }}
-          />
-        </div>
-
         <Routes>
           <Route path="/" element={<Test>Hello World</Test>} />
           <Route path="/all" element={<All />} />

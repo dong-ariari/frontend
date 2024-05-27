@@ -7,6 +7,7 @@ export const Layer = styled.div`
   border-bottom: solid 0.063rem ${(props) => props.theme.color.grey._300};
   padding: 0 1rem 0 0.5rem;
   align-items: center;
+  font-family: 'Pretendard Variable';
 `;
 
 export const Container = styled.form`
