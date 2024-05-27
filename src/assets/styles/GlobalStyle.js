@@ -9,7 +9,8 @@ const GlobalStyle = createGlobalStyle`
     ${reset}
     @font-face {
         font-family: 'Pretendard Variable';
-        src: url(${pretendardUrl});
+        src: url(${pretendardUrl}) format('woff2');
+        font-display: block;
     }
     
     html, body, div, span, applet, object, iframe,
