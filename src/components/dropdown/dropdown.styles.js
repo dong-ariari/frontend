@@ -4,7 +4,6 @@ export const Layer = styled.div`
   display: flex;
   flex-direction: row;
   gap: 0.75rem;
-  font-family: 'Pretendard Variable';
 `;
 
 export const Container = styled.div`
