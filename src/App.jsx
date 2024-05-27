@@ -5,7 +5,6 @@ import DefaultTheme from "./assets/styles/DefaultTheme";
 import All from "./pages/all";
 import Oncampus from "./pages/oncampus";
 import Offcampus from "./pages/offcampus";
-import DropdownComponents from "./components/dropdown/dropdownComponents";
 
 // default theme 사용법
 const Test = styled.div`

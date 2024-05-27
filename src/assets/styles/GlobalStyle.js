@@ -30,6 +30,7 @@ const GlobalStyle = createGlobalStyle`
         border: 0;
         font-size: 100%;
         font: inherit;
+        font-family: 'Pretendard Variable' !important;
         vertical-align: baseline;
     }
     /* HTML5 display-role reset for older browsers */
