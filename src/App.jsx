@@ -11,7 +11,6 @@ import Header from "./components/header/header.jsx";
 import Mypage from "./pages/mypage";
 import Notification from "./pages/notification";
 import dummy from "./assets/images/logo.png";
-import header from './assets/images/header.png';
 // default theme 사용법
 const Test = styled.div`
   background-color: ${(props) => props.theme.color.grey._700};
@@ -32,7 +31,6 @@ function App() {
           userName="User_name#Number"
           onLoginStateChange={(bool)=>{}}
         />
-        <img src={header} style={{width: '1440px', marginTop: '10px', height: '80px'}} alt="" />
         <ChipsComponenet data={CHIPS_DATA} />
         <Routes>
           <Route path="/" element={<Test>Hello World</Test>} />

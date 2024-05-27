@@ -23,7 +23,7 @@ export default function Header({ img, userName, hasAlert, isLogedIn, onLoginStat
         <S.Wrapper>
           <S.Title onClick={()=>handleNavigate("/all")}>
             <S.Logo src={logo} />
-            <S.Eng>AriAri</S.Eng>
+            <S.Eng>AriAi</S.Eng>
             <S.Kor>아리아리</S.Kor>
           </S.Title>
 
