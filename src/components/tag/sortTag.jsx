@@ -2,16 +2,14 @@ import { useState } from "react";
 import * as S from "./sortTag.styles";
 
 export default function SortTag({ data, onSelectChange }) {
-   
   const [sortTagData, setSortTagData] = useState(data);
   function handleSelected(id) {
     const updatedData = sortTagData.map((item) => ({
-      
       ...item,
-      select: id === item.id ? true: item.select,
+      select: id === item.id,
     }));
     setSortTagData(updatedData);
-    onSelectChange(updatedData); 
+    onSelectChange(id);
   }
   return (
     <S.Layer>

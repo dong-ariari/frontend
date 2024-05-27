@@ -23,7 +23,7 @@ function App() {
     <Router>
       <GlobalStyle />
       <ThemeProvider theme={DefaultTheme}>
-        <SortTag data={SORT_TAG_DATA} />
+        <SortTag data={SORT_TAG_DATA} onSelectChange={(id)=>{console.log(`selectd: ${id}`)}} />
         <Routes>
           <Route path="/" element={<Test>Hello World</Test>} />
           <Route path="/all" element={<All />} />
