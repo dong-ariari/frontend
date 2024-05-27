@@ -3,22 +3,23 @@ import styled from "styled-components";
 export const Layer = styled.div`
   display: flex;
   justify-content: center;
-  background-color: #FFD7FF;
+  background-color: #ffd7ff;
   user-select: none;
+  height: 5rem;
 `;
 export const Container = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 5rem;
   width: 90rem;
   justify-content: space-between;
+  border: solid 1px black;
 `;
 
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 4.813rem;
+  gap: 4.438rem;
 `;
 
 export const Logo = styled.img`
@@ -39,16 +40,24 @@ export const Title = styled.div`
   align-items: end;
   gap: 0.3rem;
   cursor: pointer;
+  color: #242424; 
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
 `;
 
 export const Eng = styled.h1`
   ${(props) => props.theme.typo.fontSize._2};
   ${(props) => props.theme.typo.fontWeight._600};
+  font-size: 28px;
+  line-height: 100%;
+  letter-spacing: -3%;
 `;
 
 export const Kor = styled.h1`
   ${(props) => props.theme.typo.fontSize._5};
   ${(props) => props.theme.typo.fontWeight._600};
+  
 `;
 export const Profile = styled.div`
   display: flex;
@@ -80,8 +89,8 @@ export const Alert = styled.div`
   background-color: #ff3030;
   width: 0.25rem;
   height: 0.25rem;
-  border-radius: 100%; 
-  position: absolute; 
-  top: 0.438rem; 
+  border-radius: 100%;
+  position: absolute;
+  top: 0.438rem;
   right: 0;
 `;
