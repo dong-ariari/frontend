@@ -1,36 +1,44 @@
 import styled from "styled-components";
 
-export const Container = styled.form`
+export const Layer = styled.div`
   width: 36.688rem;
   height: 3rem;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   border-bottom: solid 0.063rem ${(props) => props.theme.color.grey._300};
   padding: 0 1rem 0 0.5rem;
+  align-items: center;
+`;
+
+export const Container = styled.form`
+  height: 2.25rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 `;
 export const Input = styled.input`
-  flex: 1;
   height: inherit;
-  margin-bottom: 0.375rem;
+  flex: 1;
+
   outline: none;
   box-shadow: none;
+  padding: 0;
   border: none;
-  color: ${props => props.theme.color.grey._700};
+  color: ${(props) => props.theme.color.grey._700};
   ${(props) => props.theme.typo.fontSize._3};
   ${(props) => props.theme.typo.fontWeight._500};
-  &::placeholder{
-    color: ${props => props.theme.color.grey._400};
+  &::placeholder {
+    color: ${(props) => props.theme.color.grey._400};
     opacity: 1;
   }
-  &::-ms-input-placeholder { 
-    color: ${props => props.theme.color.grey._400};
+  &::-ms-input-placeholder {
+    color: ${(props) => props.theme.color.grey._400};
   }
 `;
 
 export const Button = styled.button`
   background: url(${(props) => props.$url}) no-repeat;
-  width: 2rem; 
+  width: 2rem;
   height: 2rem;
   border: none;
   cursor: pointer;
