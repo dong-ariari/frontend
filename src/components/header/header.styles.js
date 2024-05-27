@@ -6,6 +6,7 @@ export const Layer = styled.div`
   background-color: #ffd7ff;
   user-select: none;
   height: 5rem;
+  font-family: "Pretendard Variable";
 `;
 export const Container = styled.div`
   display: flex;
@@ -13,13 +14,35 @@ export const Container = styled.div`
   align-items: center;
   width: 90rem;
   justify-content: space-between;
-  border: solid 1px black;
 `;
 
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
   gap: 4.438rem;
+`;
+
+export const Title = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  color: #242424;
+  line-height: 100%;
+`;
+
+export const Eng = styled.h1`
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.75rem;
+  margin: 0 0.25rem 0 0.375rem;
+`;
+
+export const Kor = styled.h1`
+  font-size: 18px;
+  font-family: Noto Sans KR;
+  font-weight: 700;
 `;
 
 export const Logo = styled.img`
@@ -34,31 +57,6 @@ export const Image = styled.img`
   background-color: ${(props) => props.theme.color.white};
 `;
 
-export const Title = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: end;
-  gap: 0.3rem;
-  cursor: pointer;
-  color: #242424; 
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-`;
-
-export const Eng = styled.h1`
-  ${(props) => props.theme.typo.fontSize._2};
-  ${(props) => props.theme.typo.fontWeight._600};
-  font-size: 28px;
-  line-height: 100%;
-  letter-spacing: -3%;
-`;
-
-export const Kor = styled.h1`
-  ${(props) => props.theme.typo.fontSize._5};
-  ${(props) => props.theme.typo.fontWeight._600};
-  
-`;
 export const Profile = styled.div`
   display: flex;
   flex-direction: row;
@@ -75,12 +73,18 @@ export const UserName = styled.div`
 export const LinkBox = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  a {
+    &:nth-child(2) {
+      margin-left: 3.375rem;
+      margin-right: 3rem;
+    }
+  }
 `;
 
 export const Link = styled.a`
+  ${(props) => props.theme.typo.fontSize._7};
+  ${(props) => props.theme.typo.fontWeight._500};
   color: ${(props) => props.theme.color.grey._700};
-  padding: 0.625rem;
   position: relative;
   cursor: pointer;
 `;
@@ -91,6 +95,6 @@ export const Alert = styled.div`
   height: 0.25rem;
   border-radius: 100%;
   position: absolute;
-  top: 0.438rem;
-  right: 0;
+  top: -0.063rem;
+  left: 2.563rem;
 `;
