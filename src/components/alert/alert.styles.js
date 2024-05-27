@@ -17,14 +17,14 @@ export const Container = styled.div`
   &:after {
     content: "";
     position: absolute;
-    top: -8px; /* Adjust the position as needed */
+    top: -0.469rem;
     width: 19px; 
     height: 9px; 
     background-image: url(${(props) => props.$triangle});
     background-size: cover;
     background-repeat: no-repeat;
-    // border: solid 1px black;
   }
+  border: solid 0.063px ${props => props.theme.color.grey._100};
   box-shadow: 0px 15px 50px 0px rgba(36, 36, 36, 0.15);
   background-color: ${props => props.theme.color.white};
   width: 15rem;
