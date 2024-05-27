@@ -23,7 +23,7 @@ function App() {
     <Router>
       <GlobalStyle />
       <ThemeProvider theme={DefaultTheme}>
-        <div style={{ backgroundColor: "pink" }}>
+        <div style={{ backgroundColor: "pink", paddingLeft: '100px' }}>
           <Alert data={DUMMY_ALERT} />
         </div>
         <Routes>

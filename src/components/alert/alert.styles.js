@@ -10,7 +10,7 @@ export const Layer = styled.div`
   cursor: pointer;
   user-select: none;
   displaly: border-box;
-  margin-top: 9px;
+  margin-top: 0.469rem;
 `;
 
 export const Container = styled.div`
