@@ -10,6 +10,7 @@ export const Layer = styled.div`
   cursor: pointer;
   user-select: none;
   displaly: border-box;
+  margin-top: 9px;
 `;
 
 export const Container = styled.div`
@@ -28,7 +29,7 @@ export const Container = styled.div`
   background-color: ${props => props.theme.color.white};
   width: 15rem;
   border-radius: 1rem;
-  padding: 1rem 0;
+  padding-top: 1rem;
   display: flex;
   gap: 0.5rem;
   flex-direction: column;
