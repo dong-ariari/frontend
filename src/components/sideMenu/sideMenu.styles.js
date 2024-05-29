@@ -33,8 +33,8 @@ export const Text = styled.p`
   align-content: center;
   color: ${(props) => {
     return props.$variant === true
-      ? props.theme.color.grey._700
-      : props.theme.color.grey._500;
+      ? props.theme.color.grey._800
+      : props.theme.color.grey._600;
   }};
   ${(props) => props.theme.typo.fontSize._6};
   ${(props) => {
