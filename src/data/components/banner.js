@@ -1,5 +1,6 @@
 export const BANNER_DATA = {
-  title: `동아리 등록 신청서`,
+  title: '아리아리',
+  title2: `동아리 등록 신청서`,
   lists: [
     { id: 0, text: "동아리 신청 후 등록까지 약 3일이 걸려요." },
     { id: 1, text: "동아리 등록이 완료되면 모집 글을 작성할 수 있어요." },
@@ -8,6 +9,7 @@ export const BANNER_DATA = {
 };
 
 export const BANNER_DATA2 = {
+  title: '아리아리',
   title: "동아리 모집 신청서",
   lists: [
     { id: 0, text: "동아리 모집 글을 작성할 수 있어요." },
