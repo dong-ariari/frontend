@@ -14,11 +14,7 @@ export default function Banner({ data }) {
       <img src={c3}></img>
       <img src={c4}></img>
 
-      <S.Title>
-        {title}
-        <br />
-        {title2}
-      </S.Title>
+      <S.Title>{title}</S.Title>
       <S.List>
         {lists.map((item) => (
           <li key={item.id}>{item.text}</li>
