@@ -16,6 +16,7 @@ const Oncampus = () => {
           title={"동아리 분류"}
           placeholder={"동아리 분류를 선택해주세요"}
           options={options}
+          isEdit={true}
         />
       </div>
     </>

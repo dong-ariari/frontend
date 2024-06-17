@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const InputContainer = styled.div`
+export const TextContainer = styled.div`
   display: flex;
   gap: 6.25rem;
   padding: 0.75rem 0rem;
@@ -8,7 +8,7 @@ export const InputContainer = styled.div`
   justify-content: space-between;
 `;
 
-export const Title = styled.p`
+export const Title = styled.div`
   min-width: 6.25rem;
   color: ${(props) => props.theme.color.grey._500};
   ${(props) => props.theme.typo.fontSize._6};
@@ -16,7 +16,13 @@ export const Title = styled.p`
   /* align-self: center; */
   align-self: flex-start;
 `;
-export const StyledInput = styled.input`
+
+export const TextAreaContainer = styled.div`
+  position: relative;
+  width: 100%;
+`;
+
+export const Textarea = styled.textarea`
   background-color: ${(props) =>
     props["data-iseditable"]
       ? props.theme.color.grey._0
@@ -28,11 +34,10 @@ export const StyledInput = styled.input`
   border-width: 0.0625rem;
   border-style: solid;
   border-radius: 0.5rem;
-  width: 27.75rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.75rem;
-  padding-bottom: 0.6875rem;
+  padding: 0.75rem 1rem 0.6875rem 1rem;
+  max-width: 26.75rem;
+  min-width: 26.75rem;
+  min-height: 8.063rem;
   ${(props) => props.theme.typo.fontSize._7};
   ${(props) => props.theme.typo.fontWeight._500};
 
@@ -50,4 +55,23 @@ export const StyledInput = styled.input`
         : props.theme.color.grey._200};
     outline: none;
   }
+`;
+
+export const Counter = styled.div`
+  ${(props) => props.theme.typo.fontSize._9};
+  ${(props) => props.theme.typo.fontWeight._400};
+  color: ${(props) => props.theme.color.grey._400};
+`;
+
+export const CharCounter = styled.div`
+  position: absolute;
+  display: flex;
+  right: 1rem;
+  bottom: 0.5rem;
+  ${(props) => props.theme.typo.fontSize._9};
+  ${(props) => props.theme.typo.fontWeight._400};
+  color: ${(props) =>
+    props.textLength > 499
+      ? props.theme.color.blue._600
+      : props.theme.color.grey._400};
 `;

@@ -25,8 +25,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Test>Hello World</Test>} />
           <Route path="/all" element={<All />} />
-          <Route path="/oncampus" element={<Oncampus />} />
-          <Route path="/offcampus" element={<Offcampus />} />
+          <Route path="/campus" element={<Campus />} />
+          <Route path="/suburbs" element={<Suburbs />} />
+          <Route path="/mypage" element={<Mypage />} />
+          <Route path="/notification" element={<Notification />} />
         </Routes>
       </ThemeProvider>
     </Router>
