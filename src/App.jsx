@@ -2,15 +2,16 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import styled, { ThemeProvider } from "styled-components";
 import GlobalStyle from "./assets/styles/GlobalStyle";
 import DefaultTheme from "./assets/styles/DefaultTheme";
-import ChipsComponenet from "./components/chips/chipsComponenet";
 import All from "./pages/all";
-import Campus from "./pages/oncampus";
-import Suburbs from "./pages/offcampus";
+import Oncampus from "./pages/oncampus";
+import Offcampus from "./pages/offcampus";
+import ChipsComponent from "./components/chips/chipsComponent";
 import { CHIPS_DATA } from "./data/components/chips";
 import Header from "./components/header/header.jsx";
 import Mypage from "./pages/mypage";
 import Notification from "./pages/notification";
 import dummy from "./assets/images/logo.png";
+
 // default theme 사용법
 const Test = styled.div`
   background-color: ${(props) => props.theme.color.grey._700};
@@ -24,6 +25,7 @@ function App() {
     <Router>
       <GlobalStyle />
       <ThemeProvider theme={DefaultTheme}>
+
         <Header
           img={dummy}
           hasAlert={true}
