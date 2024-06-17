@@ -9,7 +9,7 @@ export const Layer = styled.div`
   position: absolute;
   cursor: pointer;
   user-select: none;
-  displaly: border-box;
+  display: border-box;
   margin-top: 0.469rem;
 `;
 
@@ -24,17 +24,18 @@ export const Container = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
   }
+  height: 15.188rem;
   border: solid 0.063px ${props => props.theme.color.grey._100};
   box-shadow: 0px 15px 50px 0px rgba(36, 36, 36, 0.15);
   background-color: ${props => props.theme.color.white};
   width: 15rem;
   border-radius: 1rem;
-  padding-top: 1rem;
+  padding: 1rem 0;
   display: flex;
   gap: 0.5rem;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  overflow: scroll;
   &:last-child {
     div:last-child {
       div:last-child {
