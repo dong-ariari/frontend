@@ -41,6 +41,9 @@ export const Container = styled.div`
   gap: 0.5rem;
   flex-direction: column;
   overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+
   &:last-child {
     div:last-child {
       div:last-child {
