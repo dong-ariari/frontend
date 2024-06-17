@@ -9,6 +9,7 @@ export const Layer = styled.button`
   display: flex;
   align-items: center;
   padding: 0 1.25rem;
+  cursor: pointer;
 `;
 
 export const Placeholder = styled.span`
