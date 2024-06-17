@@ -18,24 +18,31 @@ export const Container = styled.div`
     content: "";
     position: absolute;
     top: -0.469rem;
-    width: 19px; 
-    height: 9px; 
+    width: 19px;
+    height: 9px;
     background-image: url(${(props) => props.$triangle});
     background-size: cover;
     background-repeat: no-repeat;
   }
+  &::-webkit-scrollbar {
+    opacity: 0;
+    width: 0.5rem;
+  }
+  scrollbar-width: thin;
+  scrollbar-color: black white;
+  align-items: center;
+
   height: 15.188rem;
-  border: solid 0.063px ${props => props.theme.color.grey._100};
+  border: solid 0.063px ${(props) => props.theme.color.grey._100};
   box-shadow: 0px 15px 50px 0px rgba(36, 36, 36, 0.15);
-  background-color: ${props => props.theme.color.white};
+  background-color: ${(props) => props.theme.color.white};
   width: 15rem;
   border-radius: 1rem;
   padding: 1rem 0;
   display: flex;
   gap: 0.5rem;
   flex-direction: column;
-  align-items: center;
-  overflow: scroll;
+  overflow-y: scroll;
   &:last-child {
     div:last-child {
       div:last-child {
@@ -43,9 +50,25 @@ export const Container = styled.div`
       }
     }
   }
+
+  &:hover {
+    &::-webkit-scrollbar {
+      opacity: 1;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: ${(props) => props.theme.color.grey._300};
+      border-radius: 1rem;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: ${(props) => props.theme.color.grey._100};
+      margin: 1rem 0;
+      border-radius: 1rem;
+    }
+  }
 `;
 
 export const Item = styled.div`
+  margin: 0 0.75rem 0 1.25rem;
   display: block;
   width: 12.5rem;
   color: ${(props) => props.theme.color.grey._700};
