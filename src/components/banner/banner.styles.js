@@ -10,19 +10,19 @@ export const Layer = styled.div`
   padding: 2rem 0 0 2rem;
   & > img {
     position: absolute;
-    &: nth-child(1) {
+    &:nth-child(1) {
       top: 0;
       left: 353.7px;
     }
-    &: nth-child(2) {
+    &:nth-child(2) {
       top: 70.55px;
       left: 736.77px;
     }
-    &: nth-child(3) {
+    &:nth-child(3) {
       top: 111px;
       left: 572px;
     }
-    &: nth-child(4) {
+    &:nth-child(4) {
       top: 562px;
       left: 131px;
     }
