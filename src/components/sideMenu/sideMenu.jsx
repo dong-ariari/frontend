@@ -6,7 +6,7 @@ const SideMenu = ({ data }) => {
 
   const handleChipsClick = (uri) => {
     console.log(uri);
-    navigate(uri);
+    // navigate(uri);
   };
 
   return (

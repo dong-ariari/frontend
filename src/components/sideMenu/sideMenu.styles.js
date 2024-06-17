@@ -9,11 +9,9 @@ export const Container = styled.div`
   width: 11.5rem;
   border-radius: 0.75rem;
   background-color: ${(props) => {
-    return props.$variant === true ? props.theme.color.white : "#F4F4F4";
+    return props.$variant === true && props.theme.color.grey._100 ;
   }};
   cursor: pointer;
-  box-shadow: ${(props) =>
-    props.$variant === true ? "0px 4px 12px rgba(0, 0, 0, 0.1)" : "none"};
 `;
 
 export const Section = styled.div`
@@ -35,8 +33,8 @@ export const Text = styled.p`
   align-content: center;
   color: ${(props) => {
     return props.$variant === true
-      ? props.theme.color.grey._700
-      : props.theme.color.grey._500;
+      ? props.theme.color.grey._800
+      : props.theme.color.grey._600;
   }};
   ${(props) => props.theme.typo.fontSize._6};
   ${(props) => {
