@@ -7,8 +7,10 @@ import Oncampus from "./pages/oncampus";
 import Offcampus from "./pages/offcampus";
 import ChipsComponent from "./components/chips/chipsComponent";
 import { CHIPS_DATA } from "./data/components/chips";
-import SortTag from "./components/tag/sortTag";
-import { SORT_TAG_DATA } from "./data/components/sortTag";
+import Header from "./components/header/header.jsx";
+import Mypage from "./pages/mypage";
+import Notification from "./pages/notification";
+import dummy from "./assets/images/logo.png";
 
 // default theme 사용법
 const Test = styled.div`
@@ -23,20 +25,22 @@ function App() {
     <Router>
       <GlobalStyle />
       <ThemeProvider theme={DefaultTheme}>
-        <div style={{backgroundColor: 'skyblue', padding: "50px"}}>
-          <SortTag
-            data={SORT_TAG_DATA}
-            onSelectChange={(id) => {
-              console.log(`selectd: ${id}`);
-            }}
-          />
-        </div>
 
+        <Header
+          img={dummy}
+          hasAlert={true}
+          isLogedIn={false}
+          userName="User_name#Number"
+          onLoginStateChange={(bool)=>{}}
+        />
+        <ChipsComponenet data={CHIPS_DATA} />
         <Routes>
           <Route path="/" element={<Test>Hello World</Test>} />
           <Route path="/all" element={<All />} />
-          <Route path="/oncampus" element={<Oncampus />} />
-          <Route path="/offcampus" element={<Offcampus />} />
+          <Route path="/campus" element={<Campus />} />
+          <Route path="/suburbs" element={<Suburbs />} />
+          <Route path="/mypage" element={<Mypage />} />
+          <Route path="/notification" element={<Notification />} />
         </Routes>
       </ThemeProvider>
     </Router>
