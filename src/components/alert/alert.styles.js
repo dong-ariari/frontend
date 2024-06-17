@@ -28,8 +28,6 @@ export const Container = styled.div`
     opacity: 0;
     width: 0.5rem;
   }
-  scrollbar-width: thin;
-  scrollbar-color: black white;
   align-items: center;
 
   height: 15.188rem;
