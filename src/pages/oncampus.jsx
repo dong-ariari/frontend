@@ -26,6 +26,12 @@ const Oncampus = () => {
           }}
           text={"세종대학교 발레 동아리"}
         />
+
+        <MiniSearch
+          onClick={() => {
+            console.log("clicked");
+          }}
+        />
       </div>
     </>
   );
