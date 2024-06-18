@@ -43,7 +43,8 @@ export const List = styled.ul`
   margin-top: 1rem;
   display: flex;
   flex-direction: column;
-  color: ${(props) => props.theme.color.grey._600};
+  color: ${(props) => props.theme.color.grey._700};
+
   ${(props) => props.theme.typo.fontWeight._500};
   ${(props) => props.theme.typo.fontSize._7};
   list-style-type: disc;
