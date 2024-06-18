@@ -33,7 +33,7 @@ export const Title = styled.p`
   color: ${(props) => props.theme.color.grey._800};
   ${(props) => props.theme.typo.fontWeight._600};
   font-size: 1.375rem;
-  
+
   letter-spacing: 0%;
   word-break: break-all;
   line-height: 2.063rem;
@@ -50,4 +50,8 @@ export const List = styled.ul`
   list-style-type: disc;
   list-style: inside;
   gap: 0.5rem;
+`;
+
+export const Highlight = styled.span`
+  color: ${(props) => props.theme.color.grey._800};
 `;
