@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Layer = styled.div`
-  width: 48.875rem;
+  max-width: 48.875rem;
   height: 12.063rem;
   background-color: ${(props) => props.theme.color.purple._400};
   border-radius: 1rem;
