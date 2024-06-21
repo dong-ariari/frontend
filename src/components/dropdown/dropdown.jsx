@@ -22,7 +22,7 @@ export default function DropDown({
 
         <img src={state.active ? dropBtnA : dropBtn} />
       </S.Head>
-      <S.Dropdown>
+      <S.Dropdown $isOpen={state.isOpen}>
         {spreadData &&
           state.isOpen &&
           spreadData.map((item) => (

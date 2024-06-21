@@ -10,7 +10,6 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   background-color: ${(props) => props.theme.color.grey._100};
-  // border: solid 0.063rem ${(props) => props.theme.color.grey._200};
   border-radius: 0.5rem;
   height: fit-content;
   position: relative;
@@ -27,14 +26,15 @@ export const Head = styled.button`
   justify-content: space-between;
   align-items: center;
   padding: 0.375rem 0.75rem;
-  border: solid 0.063rem
-    ${(props) => {
-      return props.$active === false
-        ? props.theme.color.grey._200
-        : props.$isOpen
-        ? props.theme.color.grey._0
-        : props.theme.color.grey._700;
-    }};
+
+  ${(props) => {
+    return props.$active === false
+      ? `border: solid 0.063rem ${props.theme.color.grey._200}`
+      : props.$isOpen
+      ? `border: solid 0.063rem ${props.theme.color.grey._200}; 
+      border-bottom: transparent;`
+      : `border: solid 0.063rem ${props.theme.color.grey._700}`;
+  }};
   border-radius: 0.5rem;
   background-color: ${(props) => {
     return props.$active === true
@@ -63,8 +63,10 @@ export const Dropdown = styled.div`
   left: 0;
   right: 0;
   padding-top: 38px;
-  background-color: ${(props) => props.theme.color.grey._100};
+  background-color: ${(props) => props.theme.color.grey._0};
   border-radius: 0.5rem;
+  ${(props) =>
+    props.$isOpen && `border: solid 0.063rem ${props.theme.color.grey._200}`}
 `;
 
 export const Spread = styled.div`
