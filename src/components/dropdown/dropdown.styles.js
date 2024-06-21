@@ -46,6 +46,8 @@ export const Head = styled.button`
       ? props.theme.color.grey._700
       : props.theme.color.grey._400;
   }};
+
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 50px;
 `;
 
 export const Text = styled.span`
