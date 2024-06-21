@@ -44,14 +44,6 @@ export const Container = styled.div`
   overflow-x: hidden;
   scrollbar-width: thin;
 
-  &:last-child {
-    div:last-child {
-      div:last-child {
-        border-bottom: none;
-      }
-    }
-  }
-
   &:hover {
     &::-webkit-scrollbar {
       opacity: 1;
@@ -91,4 +83,18 @@ export const Item = styled.div`
     padding-bottom: 0.5rem;
     border-bottom: solid 0.063rem ${(props) => props.theme.color.grey._200};
   }
+`;
+
+export const Button = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12rem;
+  height: 2rem;
+  background-color: ${(props) => props.theme.color.blue._400};
+  color: ${(props) => props.theme.color.white};
+  border-radius: 0.375rem;
+  border: none;
+  ${(props) => props.theme.typo.fontSize._8};
+  ${(props) => props.theme.typo.fontWeight._600};
 `;
