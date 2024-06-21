@@ -8,6 +8,7 @@ export const BANNER_DATA = {
     </>
   ),
   lists: [
+
     { id: 0, text: <>동아리 신청 후 등록까지 약 <Highlight>3일</Highlight>이 걸려요.</> },
     { id: 1, text: <>동아리 등록이 완료되면 모집 글을 작성할 수 있어요.</> },
     { id: 2, text: <>완료 시 메세지로 알려드려요.</> },
