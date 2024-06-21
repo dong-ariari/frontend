@@ -29,7 +29,12 @@ function App() {
             paddingLeft: "100px",
           }}
         >
-          <Alert data={DUMMY_ALERT} />
+          <Alert
+            data={DUMMY_ALERT}
+            onClick={() => {
+              console.log("clicked");
+            }}
+          />
         </div>
         <Routes>
           <Route path="/" element={<Test>Hello World</Test>} />

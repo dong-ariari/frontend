@@ -1,7 +1,7 @@
 import * as S from "./alert.styles";
 import triangle from "../../assets/images/triangle.svg";
 
-export function Alert({ data }) {
+export function Alert({ data, onClick }) {
   function handleClick(id) {
     // mote to its reference
     console.log(id);
@@ -16,7 +16,7 @@ export function Alert({ data }) {
             <div>{item.text}</div>
           </S.Item>
         ))}
-        <S.Button>알림 모두 보기</S.Button>
+        <S.Button onClick={onClick}>알림 모두 보기</S.Button>
       </S.Container>
     </S.Layer>
   );
