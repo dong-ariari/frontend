@@ -9,17 +9,17 @@ export const Layer = styled.div`
   position: absolute;
   cursor: pointer;
   user-select: none;
-  display: border-box;
-  margin-top: 0.469rem;
+  /* display: border-box; */
+  margin-top: 0.75rem;
 `;
 
 export const Container = styled.div`
   &:after {
     content: "";
     position: absolute;
-    top: -0.469rem;
-    width: 19px;
-    height: 9px;
+    top: -0.625rem;
+    width: 1.563rem;
+    height: 0.75rem;
     background-image: url(${(props) => props.$triangle});
     background-size: cover;
     background-repeat: no-repeat;
@@ -29,12 +29,11 @@ export const Container = styled.div`
     width: 0.5rem;
   }
   align-items: center;
-
-  height: 13.188rem;
+  height: 13.125rem;
   border: solid 0.063px ${(props) => props.theme.color.grey._100};
   box-shadow: 0px 15px 50px 0px rgba(36, 36, 36, 0.15);
   background-color: ${(props) => props.theme.color.white};
-  width: 15rem;
+  width: 14.938rem;
   border-radius: 1rem;
   padding: 1rem 0;
   display: flex;
@@ -43,7 +42,6 @@ export const Container = styled.div`
   overflow-y: scroll;
   overflow-x: hidden;
   scrollbar-width: thin;
-  border: solid 1px red;
 
   &:hover {
     &::-webkit-scrollbar {
@@ -62,7 +60,6 @@ export const Container = styled.div`
   &:last-child div:nth-child(5) {
     div:nth-child(3) {
       border-bottom: none;
-      /* border: solid 1px red; */
     }
   }
 `;
@@ -104,6 +101,5 @@ export const Button = styled.button`
   ${(props) => props.theme.typo.fontWeight._600};
 
   width: 12rem;
-  height: 2rem;
   min-height: 2rem;
 `;
