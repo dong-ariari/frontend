@@ -16,8 +16,8 @@ export function Alert({ data }) {
             <div>{item.text}</div>
           </S.Item>
         ))}
+        <S.Button>알림 모두 보기</S.Button>
       </S.Container>
-      <S.Button>알림 모두 보기</S.Button>
     </S.Layer>
   );
 }

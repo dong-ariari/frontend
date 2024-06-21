@@ -30,7 +30,7 @@ export const Container = styled.div`
   }
   align-items: center;
 
-  height: 15.188rem;
+  height: 13.188rem;
   border: solid 0.063px ${(props) => props.theme.color.grey._100};
   box-shadow: 0px 15px 50px 0px rgba(36, 36, 36, 0.15);
   background-color: ${(props) => props.theme.color.white};
@@ -43,6 +43,7 @@ export const Container = styled.div`
   overflow-y: scroll;
   overflow-x: hidden;
   scrollbar-width: thin;
+  border: solid 1px red;
 
   &:hover {
     &::-webkit-scrollbar {
@@ -56,6 +57,12 @@ export const Container = styled.div`
       background-color: ${(props) => props.theme.color.grey._100};
       margin: 1rem 0;
       border-radius: 1rem;
+    }
+  }
+  &:last-child div:nth-child(5) {
+    div:nth-child(3) {
+      border-bottom: none;
+      /* border: solid 1px red; */
     }
   }
 `;
@@ -89,12 +96,14 @@ export const Button = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 12rem;
-  height: 2rem;
   background-color: ${(props) => props.theme.color.blue._400};
   color: ${(props) => props.theme.color.white};
   border-radius: 0.375rem;
   border: none;
   ${(props) => props.theme.typo.fontSize._8};
   ${(props) => props.theme.typo.fontWeight._600};
+
+  width: 12rem;
+  height: 2rem;
+  min-height: 2rem;
 `;
