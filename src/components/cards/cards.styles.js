@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const Layer = styled.div`
   display: flex;
   flex-direction: row;
-  max-width: 75.313rem;
-  gap: 3.75rem 1.5rem;
+  max-width: 74.5rem;
+  gap: 3.75rem 1.25rem;
   &::-webkit-scrollbar {
     display: none;
   }
@@ -41,6 +41,7 @@ export const Box = styled.div`
   flex-direction: row;
   align-items: end;
   gap: 0.5rem;
+  margin-bottom: 0.5rem;
 `;
 
 export const Title = styled.h1`
