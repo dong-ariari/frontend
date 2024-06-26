@@ -7,47 +7,47 @@ import StarIcon from '../../assets/icons/star.svg';
 
 
 
-export const SIDEMENU_DATA = [
+export const MAIN_SIDEMENU_DATA = [
   {
     id: 1,
     title: "둘러보기",
     imgPath: EyeIcon,
-    uri: "/oncampus",
+    uri: "/all",
     variant: false,
   },
   {
     id: 2,
     title: "전체 동아리",
     imgPath: GlassIcon,
-    uri: "/offcampus",
+    uri: "/",
     variant: false,
   },
   {
     id: 3,
     title: "나의 동아리",
     imgPath: HeartIcon,
-    uri: "/all",
+    uri: "/",
     variant: false,
   },
   {
     id: 4,
     title: "동아리 등록하기",
     imgPath: LetterIcon,
-    uri: "/all",
+    uri: "/",
     variant: false,
   },
   {
     id: 5,
     title: "동아리 모집하기",
     imgPath: MemoIcon,
-    uri: "/all",
+    uri: "/",
     variant: false,
   },
   {
     id: 6,
     title: "즐겨찾기",
     imgPath: StarIcon,
-    uri: "/all",
+    uri: "/",
     variant: false,
   },
 ];
