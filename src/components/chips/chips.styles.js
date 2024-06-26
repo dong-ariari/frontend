@@ -6,10 +6,7 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.p`
-  padding-left: 0.875rem;
-  padding-right: 0.875rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding: 0.313rem 0.75rem;
   border-radius: 0.875rem;
   background-color: ${(props) => {
     return props.$variant === true
@@ -21,7 +18,7 @@ export const Title = styled.p`
       ? props.theme.color.white
       : props.theme.color.grey._600;
   }};
-  ${(props) => props.theme.typo.fontSize._5};
-  ${(props) => props.theme.typo.fontWeight._500};
+  ${(props) => props.theme.typo.fontSize._7};
+  ${(props) => props.theme.typo.fontWeight._600};
   cursor: pointer;
 `;
