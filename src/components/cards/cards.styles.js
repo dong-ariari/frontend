@@ -52,12 +52,17 @@ export const Title = styled.h1`
 `;
 
 export const Badge = styled.div`
+  height: 1.75rem;
+  min-width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 0.313rem 0.625rem;
   background-color: ${(props) => props.theme.color.grey._0};
   border-radius: 0.5rem;
   color: ${(props) => props.theme.color.grey._800};
   ${(props) => props.theme.typo.fontSize._8};
-  ${(props) => props.theme.typo.fontWeight._600};
+  ${(props) => props.theme.typo.fontWeight._700};
 `;
 
 export const Text = styled.p`
