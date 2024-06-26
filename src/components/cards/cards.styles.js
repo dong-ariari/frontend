@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Layer = styled.div`
+  cursor: pointer;
   display: flex;
   flex-direction: row;
   max-width: 74.5rem;
