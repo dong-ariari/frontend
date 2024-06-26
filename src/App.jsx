@@ -2,12 +2,10 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import GlobalStyle from "./assets/styles/GlobalStyle";
 import DefaultTheme from "./assets/styles/DefaultTheme";
-import All from "./pages/all/all";
-import Oncampus from "./pages/oncampus";
-import Offcampus from "./pages/offcampus";
 import Mypage from "./pages/mypage";
 import Layout from "./layouts/layout/layout";
-import MainLayout from "./layouts/mainLayout/mainLayout";
+import Explore from "./pages/explore/explore";
+import All from "./pages/all/all";
 
 function App() {
   return (
@@ -17,13 +15,10 @@ function App() {
         <Layout>
           <Routes>
             <Route path="/" element={<>hello world</>} />
-
-            {/* 둘러보기(전체, 교내, 연합) */}
-            <Route path="/all" element={<All />} />
-            <Route path="/on-campus" element={<Oncampus />} />
-            <Route path="/off-campus" element={<Offcampus />} />
+            {/* 둘러보기*/}
+            <Route path="/explore" element={<Explore />} />
             {/* 전체 동아리 */}
-            <Route path="/clubs" element={<>all clubs</>} />
+            <Route path="/all" element={<All />} />
             {/* 동아리 등록하기 */}
             <Route path="/register" element={<>register</>} />
             {/* 동아리 모집하기 */}

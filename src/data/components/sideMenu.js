@@ -12,14 +12,14 @@ export const MAIN_SIDEMENU_DATA = [
     id: 1,
     title: "둘러보기",
     imgPath: EyeIcon,
-    uri: "/all",
+    uri: "/explore",
     variant: false,
   },
   {
     id: 2,
     title: "전체 동아리",
     imgPath: GlassIcon,
-    uri: "/",
+    uri: "/all",
     variant: false,
   },
   {

@@ -1,27 +1,23 @@
-import Cards from "../../components/cards/cards.jsx";
-import { DUMMY_CARD } from "../../data/dummy/cards.js";
-import MainLayout from "../../layouts/mainLayout/mainLayout.jsx";
-import * as S from "./all.styles.js";
+import { useState } from "react";
+import Cards from "../../components/cards/cards";
+import { DUMMY_CARD } from "../../data/dummy/cards";
+import MainLayout from "../../layouts/mainLayout/mainLayout";
+import * as S from "./all.styles";
 
-const All = () => {
+export default function All() {
+  const [type, setType] = useState(1);
+  function onTypeChange(type) {
+    setType(type);
+  }
+
   return (
-    <MainLayout>
+    <MainLayout onChipClick={(type) => onTypeChange(type)}>
       <S.Container>
-        <S.Section>
-          <S.Title>최신순</S.Title>
-          <Cards onClick={() => {}} data={DUMMY_CARD} carousel={true} />
-        </S.Section>
-        <S.Section>
-          <S.Title>인기순</S.Title>
-          <Cards onClick={() => {}} data={DUMMY_CARD} carousel={true} />
-        </S.Section>
-        <S.Section>
-          <S.Title>마감임박순</S.Title>
-          <Cards onClick={() => {}} data={DUMMY_CARD} carousel={true} />
-        </S.Section>
+        <S.Title>
+          모든 동아리({type === 1 ? "전체" : type === 2 ? "교내" : "연합"})
+        </S.Title>
+        <Cards data={DUMMY_CARD} carousel={false} />
       </S.Container>
     </MainLayout>
   );
-};
-
-export default All;
+}

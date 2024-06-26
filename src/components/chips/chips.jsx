@@ -5,7 +5,6 @@ import { useState } from "react";
 const Chips = ({ data, onChipClick }) => {
   const [chipsData, setChipsData] = useState(data);
   function handleChipsClick(id) {
-    console.log(id);
     const newChipsData = chipsData.map((item) => {
       return { ...item, variant: item.id === id };
     });

@@ -5,13 +5,13 @@ import MiniSearch from "../../components/miniSearch/miniSearch";
 import { CHIPS_DATA } from "../../data/components/chips";
 import Chips from "../../components/chips/chips.jsx";
 
-export default function MainLayout({ children }) {
+export default function MainLayout({ children, onChipClick }) {
   return (
     <>
       <S.Header>
         <S.Content>
           <MiniSearch />
-          <Chips data={CHIPS_DATA} />
+          <Chips data={CHIPS_DATA} onChipClick={(id)=>onChipClick(id)} />
         </S.Content>
       </S.Header>
 

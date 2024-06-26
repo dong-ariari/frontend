@@ -10,5 +10,8 @@ export const Title = styled.div`
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
+`;
+
+export const Section = styled.div`
   margin-bottom: 4rem;
 `;
