@@ -1,12 +1,12 @@
 import * as S from "./cards.styles";
 import defaultImg from "../../assets/icons/defaultPoster.png";
-export default function Cards({ small, data, onClick }) {
+export default function Cards({ small, data, onClick, carousel }) {
   function errorHandler(e) {
     e.currentTarget.src = defaultImg;
     console.log(e.currentTarget.src);
   }
   return (
-    <S.Layer>
+    <S.Layer $carousel={carousel}>
       {data.map((item) => (
         <S.Container
           onClick={() => onClick(item.id)}

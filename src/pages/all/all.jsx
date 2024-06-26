@@ -9,11 +9,11 @@ const All = () => {
       <S.Container>
         <S.Section>
           <S.Title>최신순</S.Title>
-          <Cards data={DUMMY_CARD} />
+          <Cards data={DUMMY_CARD} carousel={true} />
         </S.Section>
         <S.Section>
           <S.Title>인기순</S.Title>
-          <Cards data={DUMMY_CARD} />
+          <Cards data={DUMMY_CARD}  carousel={false} />
         </S.Section>
         <S.Section>
           <S.Title>마감임박순</S.Title>

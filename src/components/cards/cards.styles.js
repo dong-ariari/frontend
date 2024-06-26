@@ -4,15 +4,25 @@ export const Layer = styled.div`
   display: flex;
   flex-direction: row;
   max-width: 75.313rem;
-  flex-wrap: wrap;
-  gap:3.75rem 1.5rem;
-  
+  gap: 3.75rem 1.5rem;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  scrollbar-width: none;
+  ${(props) =>
+    props.$carousel
+      ? `overflow-x: scroll;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        `
+      : `flex-wrap: wrap;`};
 `;
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: ${(props) => (props.small ? "17.625rem" : "24rem")};
+  scroll-snap-align: start;
 `;
 export const Main = styled.div`
   display: flex;
