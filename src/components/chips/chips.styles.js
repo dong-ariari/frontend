@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  gap: 0.75rem;
+  gap: 0.5rem;
 `;
 
 export const Title = styled.p`
@@ -10,11 +10,11 @@ export const Title = styled.p`
   padding-right: 0.875rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  border-radius: 1rem;
+  border-radius: 0.875rem;
   background-color: ${(props) => {
     return props.$variant === true
       ? props.theme.color.grey._800
-      : props.theme.color.grey._200;
+      : props.theme.color.white;
   }};
   color: ${(props) => {
     return props.$variant === true
