@@ -20,7 +20,7 @@ export default function All() {
         <S.Title>
           모든 동아리({type === 1 ? "전체" : type === 2 ? "교내" : "연합"})
         </S.Title>
-        <Cards data={DUMMY_CARD} carousel={false} />
+        <Cards data={DUMMY_CARD} carousel={false} badge={true} />
       </S.Container>
     </MainLayout>
   );

@@ -1,6 +1,6 @@
 import * as S from "./cards.styles";
 import defaultImg from "../../assets/icons/defaultPoster.png";
-export default function Cards({ small, data, onClick, carousel }) {
+export default function Cards({ small, badge, data, onClick, carousel }) {
   function errorHandler(e) {
     e.currentTarget.src = defaultImg;
     console.log(e.currentTarget.src);
@@ -22,7 +22,7 @@ export default function Cards({ small, data, onClick, carousel }) {
             />
             <S.Box>
               <S.Title>{item.clubName}</S.Title>
-              <S.Badge>Badge</S.Badge>
+              {badge && <S.Badge>Badge</S.Badge>}
             </S.Box>
           </S.Main>
           <S.Text>{item.recruitText}</S.Text>
