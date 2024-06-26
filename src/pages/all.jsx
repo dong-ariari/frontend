@@ -1,4 +1,3 @@
-import Chips from "../components/chips/chips.jsx";
 import ChipsComponent from "../components/chips/chipsComponent.jsx";
 import Footer from "../components/footer/footer";
 import Header from "../components/header/header.jsx";
