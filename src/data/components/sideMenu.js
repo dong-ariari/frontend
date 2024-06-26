@@ -37,14 +37,14 @@ export const SIDEMENU_DATA = [
     variant: false,
   },
   {
-    id: 4,
+    id: 5,
     title: "동아리 모집하기",
     imgPath: MemoIcon,
     uri: "/all",
     variant: false,
   },
   {
-    id: 5,
+    id: 6,
     title: "즐겨찾기",
     imgPath: StarIcon,
     uri: "/all",

@@ -1,4 +1,5 @@
 import Chips from "../components/chips/chips.jsx";
+import ChipsComponent from "../components/chips/chipsComponent.jsx";
 import Footer from "../components/footer/footer";
 import Header from "../components/header/header.jsx";
 import SideMenuComponent from "../components/sideMenu/sideMenuComponent.jsx";
@@ -11,6 +12,7 @@ const All = () => {
     <>
       <Header />
       <SideMenuComponent data={SIDEMENU_DATA} />
+      <ChipsComponent data={CHIPS_DATA} />
       <Footer text={FOOTER_TEXT} text2={FOOTER_TEXT2} />
     </>
   );
