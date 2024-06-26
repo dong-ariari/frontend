@@ -12,7 +12,14 @@ export const Content = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  ${(props) =>
+    props.$miniSearch && props.$chips
+      ? `justify-content: space-between;`
+      : props.$chips
+      ? `& > *:first-child {display: none;}
+        justify-content: flex-end;`
+      : ""}
+  /* justify-content: space-between; */
 
   width: 90rem;
 `;

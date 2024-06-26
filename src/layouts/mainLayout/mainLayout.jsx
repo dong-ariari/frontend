@@ -13,11 +13,9 @@ export default function MainLayout({
   return (
     <>
       <S.Header>
-        <S.Content>
-          {onMiniSearchClick && <MiniSearch onClick={onMiniSearchClick} />}
-          {onChipClick && (
-            <Chips data={CHIPS_DATA} onChipClick={(id) => onChipClick(id)} />
-          )}
+        <S.Content $miniSearch={onMiniSearchClick} $chips={onChipClick}>
+          <MiniSearch onClick={onMiniSearchClick} />
+          <Chips data={CHIPS_DATA} onChipClick={(id) => onChipClick(id)} />
         </S.Content>
       </S.Header>
 
