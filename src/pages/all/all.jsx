@@ -11,14 +11,14 @@ const All = () => {
           <S.Title>최신순</S.Title>
           <Cards onClick={() => {}} data={DUMMY_CARD} carousel={true} />
         </S.Section>
-        {/* <S.Section>
+        <S.Section>
           <S.Title>인기순</S.Title>
           <Cards onClick={() => {}} data={DUMMY_CARD} carousel={true} />
         </S.Section>
         <S.Section>
           <S.Title>마감임박순</S.Title>
           <Cards onClick={() => {}} data={DUMMY_CARD} carousel={true} />
-        </S.Section> */}
+        </S.Section>
       </S.Container>
     </MainLayout>
   );

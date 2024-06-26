@@ -2,8 +2,8 @@ import * as S from "./mainLayout.styles";
 import { MAIN_SIDEMENU_DATA } from "../../data/components/sideMenu.js";
 import SideMenuComponent from "../../components/sideMenu/sideMenuComponent.jsx";
 import MiniSearch from "../../components/miniSearch/miniSearch";
-import ChipsComponent from "../../components/chips/chipsComponent";
 import { CHIPS_DATA } from "../../data/components/chips";
+import Chips from "../../components/chips/chips.jsx";
 
 export default function MainLayout({ children }) {
   return (
@@ -11,7 +11,7 @@ export default function MainLayout({ children }) {
       <S.Header>
         <S.Content>
           <MiniSearch />
-          <ChipsComponent data={CHIPS_DATA} />
+          <Chips data={CHIPS_DATA} />
         </S.Content>
       </S.Header>
 
