@@ -15,11 +15,10 @@ export default function MainLayout({ children }) {
         </S.Content>
       </S.Header>
 
-      
-      {/* <S.Container> */}
-      <SideMenuComponent data={SIDEMENU_DATA} />
-      {children}
-      {/* </S.Container> */}
+      <S.Container>
+        <SideMenuComponent data={SIDEMENU_DATA} />
+        {children}
+      </S.Container>
     </>
   );
 }

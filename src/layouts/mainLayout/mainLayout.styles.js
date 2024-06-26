@@ -16,3 +16,9 @@ export const Content = styled.div`
 
   width: 90rem;
 `;
+
+export const Container = styled.div`
+  width: 90rem;
+  flex: 1;
+  margin: 4rem auto 0 auto;
+`;
