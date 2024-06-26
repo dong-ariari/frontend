@@ -49,14 +49,14 @@ export const Title = styled.h1`
   color: ${(props) => props.theme.color.grey._800};
   ${(props) => props.theme.typo.fontSize._4};
   ${(props) => props.theme.typo.fontWeight._700};
+  height: 1.75rem;
 `;
 
 export const Badge = styled.div`
-  height: 1.75rem;
-  min-width: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  min-width: 1.75rem;
   padding: 0.313rem 0.625rem;
   background-color: ${(props) => props.theme.color.grey._0};
   border-radius: 0.5rem;

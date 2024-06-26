@@ -22,7 +22,7 @@ export default function Cards({ small, badge, data, onClick, carousel }) {
             />
             <S.Box>
               <S.Title>{item.clubName}</S.Title>
-              {badge && <S.Badge>Badge</S.Badge>}
+              {badge && <S.Badge>{item.badge}</S.Badge>}
             </S.Box>
           </S.Main>
           <S.Text>{item.recruitText}</S.Text>
