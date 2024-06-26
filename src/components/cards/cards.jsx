@@ -1,15 +1,15 @@
 import * as S from "./cards.styles";
 import defaultImg from "../../assets/icons/defaultPoster.png";
-export default function Cards({ small, cardList, clickHandler }) {
+export default function Cards({ small, data, onClick }) {
   function errorHandler(e) {
     e.currentTarget.src = defaultImg;
     console.log(e.currentTarget.src);
   }
   return (
     <S.Layer>
-      {cardList.map((item) => (
+      {data.map((item) => (
         <S.Container
-          onClick={() => clickHandler(item.id)}
+          onClick={() => onClick(item.id)}
           key={item.id}
           small={small}
         >

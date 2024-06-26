@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import GlobalStyle from "./assets/styles/GlobalStyle";
 import DefaultTheme from "./assets/styles/DefaultTheme";
-import All from "./pages/all";
+import All from "./pages/all/all";
 import Oncampus from "./pages/oncampus";
 import Offcampus from "./pages/offcampus";
 import Mypage from "./pages/mypage";

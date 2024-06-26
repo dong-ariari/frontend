@@ -21,4 +21,7 @@ export const Container = styled.div`
   width: 90rem;
   flex: 1;
   margin: 4rem auto 0 auto;
+  display: flex;
+  flex-direction: row;
+  gap: 2.625rem;
 `;
