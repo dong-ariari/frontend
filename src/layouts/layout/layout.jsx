@@ -1,6 +1,6 @@
-import Footer from "../components/footer/footer";
-import Header from "../components/header/header";
-import { FOOTER_TEXT, FOOTER_TEXT2 } from "../data/components/footer";
+import Footer from "../../components/footer/footer";
+import Header from "../../components/header/header";
+import { FOOTER_TEXT, FOOTER_TEXT2 } from "../../data/components/footer";
 import * as S from "./layout.styles";
 
 export default function Layout({ children }) {
