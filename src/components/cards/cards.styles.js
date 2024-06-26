@@ -48,7 +48,7 @@ export const Box = styled.div`
 export const Title = styled.h1`
   color: ${(props) => props.theme.color.grey._800};
   ${(props) => props.theme.typo.fontSize._4};
-  ${(props) => props.theme.typo.fontWeight._600};
+  ${(props) => props.theme.typo.fontWeight._700};
 `;
 
 export const Badge = styled.div`
