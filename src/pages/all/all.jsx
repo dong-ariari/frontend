@@ -10,8 +10,12 @@ export default function All() {
     setType(type);
   }
 
+  function onMiniSearchClick() {
+    console.log("mini search");
+  }
+
   return (
-    <MainLayout onChipClick={(type) => onTypeChange(type)}>
+    <MainLayout onChipClick={(type) => onTypeChange(type)} onMiniSearchClick={onMiniSearchClick}>
       <S.Container>
         <S.Title>
           모든 동아리({type === 1 ? "전체" : type === 2 ? "교내" : "연합"})
