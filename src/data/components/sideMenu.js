@@ -1,5 +1,11 @@
-import EyeIcon from "../../assets/images/eyes.png";
-import HeartIcon from "../../assets/images/green_heart.png";
+import EyeIcon from "../../assets/icons/eyes.svg";
+import GlassIcon from '../../assets/icons/magnifying-glass.svg';
+import HeartIcon from "../../assets/icons/green-heart.svg";
+import LetterIcon from '../../assets/icons/love-letter.svg';
+import MemoIcon from '../../assets/icons/memo.svg';
+import StarIcon from '../../assets/icons/star.svg';
+
+
 
 export const SIDEMENU_DATA = [
   {
@@ -12,14 +18,35 @@ export const SIDEMENU_DATA = [
   {
     id: 2,
     title: "전체 동아리",
-    imgPath: HeartIcon,
+    imgPath: GlassIcon,
     uri: "/offcampus",
     variant: false,
   },
   {
     id: 3,
     title: "나의 동아리",
-    imgPath: EyeIcon,
+    imgPath: HeartIcon,
+    uri: "/all",
+    variant: false,
+  },
+  {
+    id: 4,
+    title: "동아리 등록하기",
+    imgPath: LetterIcon,
+    uri: "/all",
+    variant: false,
+  },
+  {
+    id: 4,
+    title: "동아리 모집하기",
+    imgPath: MemoIcon,
+    uri: "/all",
+    variant: false,
+  },
+  {
+    id: 5,
+    title: "즐겨찾기",
+    imgPath: StarIcon,
     uri: "/all",
     variant: false,
   },
