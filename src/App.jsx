@@ -9,6 +9,8 @@ import ChipsComponent from "./components/chips/chipsComponent";
 import { CHIPS_DATA } from "./data/components/chips";
 import { Alert } from "./components/alert/alert";
 import { DUMMY_ALERT } from "./data/dummy/alert";
+import Mypage from "./pages/mypage";
+
 
 // default theme 사용법
 const Test = styled.div`
@@ -39,8 +41,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Test>Hello World</Test>} />
           <Route path="/all" element={<All />} />
-          <Route path="/oncampus" element={<Oncampus />} />
-          <Route path="/offcampus" element={<Offcampus />} />
+          <Route path="/campus" element={<Oncampus />} />
+          <Route path="/offCampus" element={<Offcampus />} />
+          <Route path="/mypage" element={<Mypage />} />
+          <Route path="/notification" element={<Notification />} />
         </Routes>
       </ThemeProvider>
     </Router>

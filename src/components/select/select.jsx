@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import * as S from "./select.styles";
 
-const Select = ({ title, placeholder, options }) => {
+const Select = ({ title, placeholder, options, isEdit, onValueChange }) => {
   const [value, setValue] = useState("");
 
   const handleChange = (e) => {
-    setValue(e.target.value);
+    const newValue = e.target.value;
+    setValue(newValue);
+    if (onValueChange) {
+      onValueChange(newValue);
+    }
   };
 
   return (
@@ -14,7 +18,8 @@ const Select = ({ title, placeholder, options }) => {
       <S.StyledSelect
         value={value}
         onChange={handleChange}
-        // defaultValue=""
+        disabled={!isEdit}
+        $isEditable={isEdit}
       >
         <option value="" disabled hidden>
           {placeholder}

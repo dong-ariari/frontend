@@ -7,10 +7,7 @@ import pretendardUrl from './../fonts/PretendardVariable.woff2';
 
 const GlobalStyle = createGlobalStyle`
     ${reset}
-    @font-face {
-        font-family: 'Pretendard Variable';
-        src: url(${pretendardUrl});
-    }
+    
     
     html, body, div, span, applet, object, iframe,
     h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -31,6 +28,7 @@ const GlobalStyle = createGlobalStyle`
         font-size: 100%;
         font: inherit;
         vertical-align: baseline;
+        font-family: 'Pretendard Variable';
     }
     /* HTML5 display-role reset for older browsers */
     article, aside, details, figcaption, figure, 
