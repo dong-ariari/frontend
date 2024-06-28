@@ -20,7 +20,7 @@ export const Backdrop = styled.div`
   left: 0;
   top: 20.25rem;
   bottom: 0;
-  z-index: 100;
+  z-index: 1;
 `;
 
 export const SearchModal = styled.div`
@@ -33,6 +33,7 @@ export const SearchModal = styled.div`
   display: flex;
   flex-direction: column;
   padding-top: 2rem;
+  padding-left: 48rem;
 `;
 
 export const Filters = styled.div`
@@ -40,5 +41,4 @@ export const Filters = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  margin-left: 768px;
 `;

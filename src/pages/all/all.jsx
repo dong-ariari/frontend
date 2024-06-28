@@ -8,6 +8,11 @@ import * as S from "./all.styles";
 import { useDropDown, useDropDown2 } from "../../hooks/useDropdown";
 import SortTag from "../../components/tag/sortTag";
 import { SORT_TAG_DATA } from "../../data/components/sortTag";
+import {
+  DUMMY_DEPART,
+  DUMMY_FIELD,
+  DUMMY_REGION,
+} from "../../data/dummy/dropdown";
 export default function All() {
   // type: 전체 | 교내 | 연합
   const [type, setType] = useState(1);
@@ -28,17 +33,40 @@ export default function All() {
   const region = useDropDown("지역을 선택해주세요");
   const field = useDropDown("분야를 선택해주세요");
 
+  function searchHandle(value) {
+    if (tag === 1) {
+      console.log(value, depart.value, major.value);
+    } else if (tag === 2) {
+      console.log(value, field.value);
+    } else if (tag === 3) {
+      console.log(value, field.value, region.value);
+    } else {
+      console.log(value);
+    }
+  }
+  function onMiniSearchClick() {
+    setSearchActive(true);
+
+    // GET
+    field.setSpreadData(DUMMY_FIELD);
+    region.setSpreadData(DUMMY_REGION);
+    depart.setSpreadData(DUMMY_DEPART);
+  }
+
+  
+
   return (
     <MainLayout
       onChipClick={(type) => onTypeChange(type)}
-      onMiniSearchClick={() => {
-        setSearchActive(true);
-      }}
+      onMiniSearchClick={onMiniSearchClick}
     >
       {searchActive && (
         <>
           <S.SearchModal>
-            <Search placeholder={"관심있는 동아리를 찾을 수 있어요"} />
+            <Search
+              onSearch={searchHandle}
+              placeholder={"관심있는 동아리를 찾을 수 있어요"}
+            />
             <S.Filters>
               <SortTag
                 data={SORT_TAG_DATA}

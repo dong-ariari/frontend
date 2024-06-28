@@ -62,7 +62,7 @@ export const Dropdown = styled.div`
   position: absolute;
   left: 0;
   right: 0;
-  padding-top: 38px;
+  padding-top: 2.375rem;
   background-color: ${(props) => props.theme.color.grey._0};
   border-radius: 0.5rem;
   ${(props) =>
