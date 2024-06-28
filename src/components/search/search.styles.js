@@ -8,6 +8,7 @@ export const Layer = styled.div`
   padding: 0 1rem 0 0.5rem;
   align-items: center;
   font-family: 'Pretendard Variable';
+  margin: 0 auto;
 `;
 
 export const Container = styled.form`
