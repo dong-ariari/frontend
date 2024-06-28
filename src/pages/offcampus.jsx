@@ -1,13 +1,11 @@
 import { useEffect, useState } from "react";
 import DropdownComponents from "../components/dropdown/dropdownComponents";
-import Input from "../components/input/input";
 import {
   DUMMY_DEPART,
   DUMMY_FIELD,
   DUMMY_REGION,
 } from "../data/dummy/dropdown";
 import { useDropDown, useDropDown2 } from "../hooks/useDropdown";
-import Button from "../components/button/button";
 import Input from "../components/input/input";
 import Search from "../components/search/search";
 import Textarea from "../components/textarea/textarea";
@@ -31,7 +29,7 @@ const Offcampus = () => {
 
   return (
     <>
-      <div style={{display: 'flex', gap: '50px'}}>
+      <div style={{ display: "flex", gap: "50px" }}>
         {/* 중앙동아리(단일 드롭다운을 사용하는 경우) = useDropdown * 1 */}
         <DropdownComponents dropdown={field} dropdown2={null} />
         {/* 단과동아리(2개 드롭다운이 연결되어 동작하는 경우) = useDropdown2 */}
