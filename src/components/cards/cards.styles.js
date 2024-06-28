@@ -1,18 +1,29 @@
 import styled from "styled-components";
 
 export const Layer = styled.div`
+  cursor: pointer;
   display: flex;
   flex-direction: row;
-  max-width: 75.313rem;
-  flex-wrap: wrap;
-  gap:3.75rem 1.5rem;
-  
+  max-width: 74.5rem;
+  gap: 3.75rem 1.25rem;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  scrollbar-width: none;
+  ${(props) =>
+    props.$carousel
+      ? `overflow-x: scroll;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        `
+      : `flex-wrap: wrap;`};
 `;
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: ${(props) => (props.small ? "17.625rem" : "24rem")};
+  scroll-snap-align: start;
 `;
 export const Main = styled.div`
   display: flex;
@@ -31,21 +42,27 @@ export const Box = styled.div`
   flex-direction: row;
   align-items: end;
   gap: 0.5rem;
+  margin-bottom: 0.5rem;
 `;
 
 export const Title = styled.h1`
   color: ${(props) => props.theme.color.grey._800};
   ${(props) => props.theme.typo.fontSize._4};
-  ${(props) => props.theme.typo.fontWeight._600};
+  ${(props) => props.theme.typo.fontWeight._700};
+  height: 1.75rem;
 `;
 
 export const Badge = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 1.75rem;
   padding: 0.313rem 0.625rem;
   background-color: ${(props) => props.theme.color.grey._0};
   border-radius: 0.5rem;
   color: ${(props) => props.theme.color.grey._800};
   ${(props) => props.theme.typo.fontSize._8};
-  ${(props) => props.theme.typo.fontWeight._600};
+  ${(props) => props.theme.typo.fontWeight._700};
 `;
 
 export const Text = styled.p`

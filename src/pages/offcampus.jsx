@@ -8,7 +8,6 @@ import {
 } from "../data/dummy/dropdown";
 import { useDropDown, useDropDown2 } from "../hooks/useDropdown";
 import Button from "../components/button/button";
-import Input from "../components/input/input";
 import Search from "../components/search/search";
 import Textarea from "../components/textarea/textarea";
 import ToggleBtn from "../components/toggleBtn/toggleBtn";

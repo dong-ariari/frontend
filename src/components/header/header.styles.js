@@ -40,7 +40,7 @@ export const Eng = styled.h1`
 `;
 
 export const Kor = styled.h1`
-  font-size: 18px;
+  font-size: 1.125rem;
   font-family: Noto Sans KR;
   font-weight: 700;
 `;

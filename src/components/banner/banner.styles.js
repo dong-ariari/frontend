@@ -12,19 +12,19 @@ export const Layer = styled.div`
     position: absolute;
     &:nth-child(1) {
       top: 0;
-      left: 353.7px;
+      left: 22.106rem;
     }
     &:nth-child(2) {
-      top: 70.55px;
-      left: 736.77px;
+      top: 4.409rem;
+      left: 46.048rem;
     }
     &:nth-child(3) {
-      top: 111px;
-      left: 572px;
+      top: 6.938rem;
+      left: 35.75rem;
     }
     &:nth-child(4) {
-      top: 562px;
-      left: 131px;
+      top: 35.125rem;
+      left: 8.188rem;
     }
   }
 `;

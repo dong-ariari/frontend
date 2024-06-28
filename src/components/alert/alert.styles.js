@@ -30,7 +30,7 @@ export const Container = styled.div`
   }
   align-items: center;
   height: 13.125rem;
-  border: solid 0.063px ${(props) => props.theme.color.grey._100};
+  border: solid 0.063rem ${(props) => props.theme.color.grey._100};
   box-shadow: 0px 15px 50px 0px rgba(36, 36, 36, 0.15);
   background-color: ${(props) => props.theme.color.white};
   width: 14.938rem;

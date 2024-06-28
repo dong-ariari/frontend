@@ -1,15 +1,15 @@
 import * as S from "./cards.styles";
 import defaultImg from "../../assets/icons/defaultPoster.png";
-export default function Cards({ small, cardList, clickHandler }) {
+export default function Cards({ small, badge, data, onClick, carousel }) {
   function errorHandler(e) {
     e.currentTarget.src = defaultImg;
     console.log(e.currentTarget.src);
   }
   return (
-    <S.Layer>
-      {cardList.map((item) => (
+    <S.Layer $carousel={carousel}>
+      {data.map((item) => (
         <S.Container
-          onClick={() => clickHandler(item.id)}
+          onClick={() => onClick(item.id)}
           key={item.id}
           small={small}
         >
@@ -22,7 +22,7 @@ export default function Cards({ small, cardList, clickHandler }) {
             />
             <S.Box>
               <S.Title>{item.clubName}</S.Title>
-              <S.Badge>Badge</S.Badge>
+              {badge && <S.Badge>{item.badge}</S.Badge>}
             </S.Box>
           </S.Main>
           <S.Text>{item.recruitText}</S.Text>

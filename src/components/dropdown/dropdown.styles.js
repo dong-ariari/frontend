@@ -4,6 +4,7 @@ export const Layer = styled.div`
   display: flex;
   flex-direction: row;
   gap: 0.75rem;
+  z-index: 10;
 `;
 
 export const Container = styled.div`
@@ -62,7 +63,7 @@ export const Dropdown = styled.div`
   position: absolute;
   left: 0;
   right: 0;
-  padding-top: 38px;
+  padding-top: 2.375rem;
   background-color: ${(props) => props.theme.color.grey._0};
   border-radius: 0.5rem;
   ${(props) =>
@@ -77,4 +78,5 @@ export const Spread = styled.div`
   align-items: center;
   color: ${(props) => props.theme.color.grey._600};
   ${(props) => props.theme.typo.fontSize._7};
+  
 `;

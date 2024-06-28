@@ -14,7 +14,7 @@ const ChipsComponent = ({ data }) => {
     setChipsData(updatedData);
   }, [location]);
 
-  return <Chips data={chipsData} />;
+  return <Chips data={chipsData} handleChipsClick={} />;
 };
 
 export default ChipsComponent;

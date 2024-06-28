@@ -1,19 +1,25 @@
 import * as S from "./header.styles";
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/logo.svg";
 import { useNavigate } from "react-router-dom";
 
-export default function Header({ img, userName, hasAlert, isLogedIn, onLoginStateChange }) {
+export default function Header({
+  profileImg,
+  userName,
+  hasAlert,
+  isLogedIn,
+  onLoginStateChange,
+}) {
   const navigate = useNavigate();
   function handleNavigate(uri) {
     console.log(uri);
     navigate(uri);
   }
 
-  function handleLoginState(){
-    if (isLogedIn){
-      onLoginStateChange(false)
-    }else{
-      onLoginStateChange(true); 
+  function handleLoginState() {
+    if (isLogedIn) {
+      onLoginStateChange(false);
+    } else {
+      onLoginStateChange(true);
     }
   }
 
@@ -21,14 +27,14 @@ export default function Header({ img, userName, hasAlert, isLogedIn, onLoginStat
     <S.Layer>
       <S.Container>
         <S.Wrapper>
-          <S.Title onClick={()=>handleNavigate("/all")}>
+          <S.Title onClick={() => handleNavigate("/all")}>
             <S.Logo src={logo} />
             <S.Eng>AriAi</S.Eng>
             <S.Kor>아리아리</S.Kor>
           </S.Title>
 
-          <S.Profile onClick={()=>handleNavigate('/mypage')}>
-            <S.Image src={img} />
+          <S.Profile onClick={() => handleNavigate("/mypage")}>
+            <S.Image src={profileImg} />
             <S.UserName>{userName}</S.UserName>
           </S.Profile>
         </S.Wrapper>
