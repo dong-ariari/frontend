@@ -10,7 +10,7 @@ import { CHIPS_DATA } from "./data/components/chips";
 import { Alert } from "./components/alert/alert";
 import { DUMMY_ALERT } from "./data/dummy/alert";
 import Mypage from "./pages/mypage";
-
+import Login from "./pages/login/login";
 
 // default theme 사용법
 const Test = styled.div`
@@ -45,6 +45,7 @@ function App() {
           <Route path="/offCampus" element={<Offcampus />} />
           <Route path="/mypage" element={<Mypage />} />
           <Route path="/notification" element={<Notification />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </ThemeProvider>
     </Router>
