@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 // 단일 드롭다운 생성
-export const useDropDown = (title, initialActive = true) => {
-  const [active, setActive] = useState(initialActive);
+export const useDropDown = (title) => {
+  const [active, setActive] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState(null);
   const [spreadData, setSpreadData] = useState();

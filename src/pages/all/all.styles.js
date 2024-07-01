@@ -33,7 +33,9 @@ export const SearchModal = styled.div`
   display: flex;
   flex-direction: column;
   padding-top: 2rem;
-  padding-left: 48rem;
+  align-items: center;
+  gap: 1.5rem;
+  
 `;
 
 export const Filters = styled.div`
@@ -41,4 +43,5 @@ export const Filters = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  margin: 0 auto;
 `;

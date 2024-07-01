@@ -11,6 +11,7 @@ export default function DropDown({
   selected,
   isBig,
 }) {
+  console.log(selected)
   return (
     <S.Container>
       <S.Head
@@ -19,7 +20,7 @@ export default function DropDown({
         $isOpen={isOpen}
         onClick={handleSpread}
       >
-        <S.Text>{selected === null ? title : selected.text}</S.Text>
+        <S.Text>{selected ? selected.text : title}</S.Text>
 
         <img src={active ? dropBtnA : dropBtn} />
       </S.Head>

@@ -4,7 +4,6 @@ export const Layer = styled.div`
   display: flex;
   flex-direction: row;
   gap: 0.75rem;
-  z-index: 10;
 `;
 
 export const Container = styled.div`
@@ -15,6 +14,8 @@ export const Container = styled.div`
   height: fit-content;
   position: relative;
   cursor: pointer;
+  width: fit-content;
+  z-index: 10;
 `;
 
 export const Head = styled.button`
@@ -78,5 +79,4 @@ export const Spread = styled.div`
   align-items: center;
   color: ${(props) => props.theme.color.grey._600};
   ${(props) => props.theme.typo.fontSize._7};
-  
 `;

@@ -3,13 +3,13 @@ import Cards from "../../components/cards/cards";
 import { DUMMY_CARD } from "../../data/dummy/cards";
 import MainLayout from "../../layouts/mainLayout/mainLayout";
 import Search from "../../components/search/search";
-import DropdownComponents from "../../components/dropdown/dropdownComponents";
 import * as S from "./all.styles";
-import { useDropDown, useDropDown2 } from "../../hooks/useDropdown";
+import { useDropDown } from "../../hooks/useDropdown";
 import SortTag from "../../components/tag/sortTag";
 import { SORT_TAG_DATA } from "../../data/components/sortTag";
-import { FIELD, REGION } from "../../data/components/dropdown";
-import { DUMMY_DEPART } from "../../data/dummy/dropdown";
+import { FIELD, REGION, DUMMY_DEPART, DUMMY_MAJOR } from "../../data/components/dropdown";
+// import {  } from "../../data/dummy/dropdown";
+import DropDown from "../../components/dropdown/dropdown";
 
 export default function All() {
   // type: 전체 | 교내 | 연합
@@ -25,7 +25,7 @@ export default function All() {
 
   // dropdowns
   const depart = useDropDown("단과대학을 선택해주세요");
-  const major = useDropDown("학과를 선택해주세요", false);
+  const major = useDropDown("학과를 선택해주세요");
   const region = useDropDown("지역을 선택해주세요");
   const field = useDropDown("분야를 선택해주세요");
 
@@ -58,12 +58,14 @@ export default function All() {
   useEffect(() => {
     region.setSpreadData(REGION);
     field.setSpreadData(FIELD);
+
+    // GET API
+    depart.setSpreadData(DUMMY_DEPART);
+    major.setSpreadData(DUMMY_MAJOR);
   }, []);
 
   function onSearchActive() {
     setSearchActive(true);
-    // GET dropdown data 요청(학과 데이터 제외)
-    depart.setSpreadData(DUMMY_DEPART);
   }
 
   function onSearchDeactive() {
@@ -86,18 +88,12 @@ export default function All() {
             />
             <S.Filters>
               <SortTag data={SORT_TAG_DATA} onSelectChange={onTagChange} />
-              {/* 교내 */}
-              {tag === 1 && (
-                <DropdownComponents dropdown={depart} dropdown2={major} />
-              )}
+              {/* 단과대 */}
+              {tag === 1 && <DropDown  {...depart} />}
               {/* 중앙 */}
-              {tag === 2 && (
-                <DropdownComponents dropdown={field} dropdown2={null} />
-              )}
+              {tag === 2 && <DropDown {...field} />}
               {/* 연합 */}
-              {tag === 3 && (
-                <DropdownComponents dropdown={field} dropdown2={region} />
-              )}
+              {tag === 3 && <DropDown {...field} />}
             </S.Filters>
           </S.SearchModal>
           <S.Backdrop onClick={onSearchDeactive} />
