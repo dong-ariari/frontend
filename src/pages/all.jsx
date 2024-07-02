@@ -11,6 +11,7 @@ const All = () => {
   return (
     <div>
       <MailAlert placeholder={"메일을 성공적으로 보냈어요!"} />
+      <div style={{width: '500px', backgroundColor: 'pink', height: '300px'}}>dummy component</div>
     </div>
   );
 };
