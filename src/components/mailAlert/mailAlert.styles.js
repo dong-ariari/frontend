@@ -14,6 +14,7 @@ export const Layer = styled.div`
   ${(props) => props.theme.typo.fontSize._6};
   ${(props) => props.theme.typo.fontWeight._600};
   position: absolute;
+  cursor: default;
 `;
 
 export const Icon = styled.img`
