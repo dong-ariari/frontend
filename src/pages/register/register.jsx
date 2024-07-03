@@ -8,6 +8,10 @@ export default function Register() {
     <MainLayout>
       <S.Layer>
         <Banner data={REGISTER_BANNER} />
+        <S.Container>
+            <S.Title>기본 정보</S.Title>
+            <S.Title>동아리 소개</S.Title>
+        </S.Container>
       </S.Layer>
     </MainLayout>
   );
