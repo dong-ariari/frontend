@@ -28,7 +28,18 @@ export const Container = styled.div`
 export const Main = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+  ${(props) =>
+    props.small &&
+    `&:hover {
+    & > img:nth-child(1) {
+      filter: brightness(0.84);
+    }
+    & > img:nth-child(2) {
+      display: block;
+    }
+  }`}
 `;
 
 export const Poster = styled.img`
@@ -37,6 +48,15 @@ export const Poster = styled.img`
   object-fit: cover;
   border-radius: 0.625rem;
 `;
+
+export const Star = styled.img`
+  display: none;
+  height: 1.022rem;
+  position: absolute;
+  left: 15.375rem;
+  top: 10.063rem;
+`;
+
 export const Box = styled.div`
   display: flex;
   flex-direction: row;

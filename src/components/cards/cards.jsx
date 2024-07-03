@@ -1,6 +1,7 @@
 import * as S from "./cards.styles";
 import defaultImg from "../../assets/icons/defaultPoster.png";
-export default function Cards({ small, badge, data, onClick, carousel }) {
+import star from "../../assets/images/star.svg";
+export default function Cards({ small, badge, data, onClick, onRemoved, carousel }) {
   function errorHandler(e) {
     e.currentTarget.src = defaultImg;
     console.log(e.currentTarget.src);
@@ -13,18 +14,19 @@ export default function Cards({ small, badge, data, onClick, carousel }) {
           key={item.id}
           small={small}
         >
-          <S.Main>
+          <S.Main small={small}>
             <S.Poster
               small={small}
               src={item.posterData === null ? defaultImg : item.posterData}
               onError={errorHandler}
               alt=""
             />
-            <S.Box>
+            <S.Star onClick={()=>onRemoved(item.id)} src={star} />
+          </S.Main>
+          <S.Box>
               <S.Title>{item.clubName}</S.Title>
               {badge && <S.Badge>{item.badge}</S.Badge>}
             </S.Box>
-          </S.Main>
           <S.Text>{item.recruitText}</S.Text>
         </S.Container>
       ))}
