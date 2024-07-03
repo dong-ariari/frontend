@@ -7,16 +7,16 @@ export default function Cards({ small, badge, data, onClick, onRemoved, carousel
     console.log(e.currentTarget.src);
   }
   return (
-    <S.Layer $carousel={carousel}>
+    <S.Layer $carousel={carousel} $small={small}>
       {data.map((item) => (
         <S.Container
           onClick={() => onClick(item.id)}
           key={item.id}
-          small={small}
+          $small={small}
         >
-          <S.Main small={small}>
+          <S.Main $small={small}>
             <S.Poster
-              small={small}
+              $small={small}
               src={item.posterData === null ? defaultImg : item.posterData}
               onError={errorHandler}
               alt=""

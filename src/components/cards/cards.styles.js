@@ -5,7 +5,7 @@ export const Layer = styled.div`
   display: flex;
   flex-direction: row;
   max-width: 74.5rem;
-  gap: 3.75rem 1.25rem;
+  gap: 3.75rem ${(props) => (props.$small ? "1rem" : "1.25rem")};
   &::-webkit-scrollbar {
     display: none;
   }
@@ -22,7 +22,7 @@ export const Layer = styled.div`
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  width: ${(props) => (props.small ? "17.625rem" : "24rem")};
+  width: ${(props) => (props.$small ? "17.875rem" : "24rem")};
   scroll-snap-align: start;
 `;
 export const Main = styled.div`
@@ -31,7 +31,7 @@ export const Main = styled.div`
   margin-bottom: 1rem;
   position: relative;
   ${(props) =>
-    props.small &&
+    props.$small &&
     `&:hover {
     & > img:nth-child(1) {
       filter: brightness(0.84);
@@ -44,7 +44,7 @@ export const Main = styled.div`
 
 export const Poster = styled.img`
   width: full;
-  height: ${(props) => (props.small ? "12.563rem" : "17.125rem")};
+  height: ${(props) => (props.$small ? "12.563rem" : "17.125rem")};
   object-fit: cover;
   border-radius: 0.625rem;
 `;
