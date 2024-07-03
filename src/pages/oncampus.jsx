@@ -14,7 +14,7 @@ const Oncampus = () => {
     <>
       <div style={{ backgroundColor: "#ffe8fb", padding: 100 }}>
         <div>onCampus</div>
-        <Toast />
+        <Toast placeholder={'메일을 성공적으로 보냈어요. 메일함을 확인해주세요!'} />
         <Select
           title={"동아리 분류"}
           placeholder={"동아리 분류를 선택해주세요"}
