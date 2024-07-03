@@ -18,8 +18,7 @@ export const Content = styled.div`
       : props.$chips
       ? `& > *:first-child {display: none;}
         justify-content: flex-end;`
-      : ""}
-  /* justify-content: space-between; */
+      : "display: none;"}
 
   width: 90rem;
 `;
