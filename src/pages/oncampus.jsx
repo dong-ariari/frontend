@@ -1,5 +1,6 @@
 import MiniSearch from "../components/miniSearch/miniSearch";
 import Select from "../components/select/select";
+import Toast from "../components/toast/toast";
 
 const options = [
   { value: "option1", label: "Option 1" },
@@ -13,6 +14,7 @@ const Oncampus = () => {
     <>
       <div style={{ backgroundColor: "#ffe8fb", padding: 100 }}>
         <div>onCampus</div>
+        <Toast />
         <Select
           title={"동아리 분류"}
           placeholder={"동아리 분류를 선택해주세요"}
