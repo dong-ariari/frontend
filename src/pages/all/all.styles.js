@@ -24,10 +24,12 @@ export const Backdrop = styled.div`
 `;
 
 export const SearchModal = styled.div`
+  z-index: 1;
   position: absolute;
   top: 5rem;
   height: 13.25rem;
   background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(35px);
   right: 0;
   left: 0;
   display: flex;
@@ -35,7 +37,6 @@ export const SearchModal = styled.div`
   padding-top: 2rem;
   align-items: center;
   gap: 1.5rem;
-  
 `;
 
 export const Filters = styled.div`

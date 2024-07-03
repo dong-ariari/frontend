@@ -7,7 +7,12 @@ import * as S from "./all.styles";
 import { useDropDown } from "../../hooks/useDropdown";
 import SortTag from "../../components/tag/sortTag";
 import { SORT_TAG_DATA } from "../../data/components/sortTag";
-import { FIELD, REGION, DUMMY_DEPART, DUMMY_MAJOR } from "../../data/components/dropdown";
+import {
+  FIELD,
+  REGION,
+  DUMMY_DEPART,
+  DUMMY_MAJOR,
+} from "../../data/components/dropdown";
 // import {  } from "../../data/dummy/dropdown";
 import DropDown from "../../components/dropdown/dropdown";
 
@@ -75,29 +80,27 @@ export default function All() {
   }
 
   return (
+    <>
     <MainLayout
       onChipClick={(type) => onTypeChange(type)}
       onMiniSearchClick={onSearchActive}
     >
       {searchActive && (
-        <>
-          <S.SearchModal>
-            <Search
-              onSearch={searchHandle}
-              placeholder={"관심있는 동아리를 찾을 수 있어요"}
-            />
-            <S.Filters>
-              <SortTag data={SORT_TAG_DATA} onSelectChange={onTagChange} />
-              {/* 단과대 */}
-              {tag === 1 && <DropDown  {...depart} />}
-              {/* 중앙 */}
-              {tag === 2 && <DropDown {...field} />}
-              {/* 연합 */}
-              {tag === 3 && <DropDown {...field} />}
-            </S.Filters>
-          </S.SearchModal>
-          <S.Backdrop onClick={onSearchDeactive} />
-        </>
+        <S.SearchModal>
+          <Search
+            onSearch={searchHandle}
+            placeholder={"관심있는 동아리를 찾을 수 있어요"}
+          />
+          <S.Filters>
+            <SortTag data={SORT_TAG_DATA} onSelectChange={onTagChange} />
+            {/* 단과대 */}
+            {tag === 1 && <DropDown {...depart} />}
+            {/* 중앙 */}
+            {tag === 2 && <DropDown {...field} />}
+            {/* 연합 */}
+            {tag === 3 && <DropDown {...field} />}
+          </S.Filters>
+        </S.SearchModal>
       )}
       <S.Container>
         <S.Title>
@@ -106,5 +109,7 @@ export default function All() {
         <Cards data={DUMMY_CARD} carousel={false} badge={true} />
       </S.Container>
     </MainLayout>
+    {searchActive && <S.Backdrop onClick={onSearchDeactive} />}
+    </>
   );
 }
