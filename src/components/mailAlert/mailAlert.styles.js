@@ -21,7 +21,6 @@ export const Layer = styled.div`
   height: 3.5rem;
   padding: 0 1.5rem;
   border-radius: 3.75rem;
-  display: flex;
   justify-content: center;
   align-items: center;
   width: fit-content;
@@ -34,9 +33,10 @@ export const Layer = styled.div`
   ${(props) =>
     props.$visible
       ? css`
+          display: flex;
           animation: ${fadeIn} 2.5s ease-in-out;
         `
-      : `opacity: 0;`}
+      : `display: none;`}
 `;
 
 export const Icon = styled.img`
