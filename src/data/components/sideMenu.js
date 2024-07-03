@@ -33,7 +33,7 @@ export const MAIN_SIDEMENU_DATA = [
     id: 4,
     title: "동아리 등록하기",
     imgPath: LetterIcon,
-    uri: "/",
+    uri: "/register",
     variant: false,
   },
   {

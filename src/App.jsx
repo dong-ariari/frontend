@@ -7,6 +7,7 @@ import Layout from "./layouts/layout/layout";
 import Explore from "./pages/explore/explore";
 import All from "./pages/all/all";
 import Favorites from "./pages/favorites/favorites";
+import Register from "./pages/register/register";
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
             {/* 전체 동아리 */}
             <Route path="/all" element={<All />} />
             {/* 동아리 등록하기 */}
-            <Route path="/register" element={<>register</>} />
+            <Route path="/register" element={<Register />} />
             {/* 동아리 모집하기 */}
             <Route path="/recruit" element={<>recruit</>} />
             {/* 즐겨찾기 */}
