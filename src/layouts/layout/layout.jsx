@@ -4,6 +4,7 @@ import { FOOTER_TEXT, FOOTER_TEXT2 } from "../../data/components/footer";
 import * as S from "./layout.styles";
 
 export default function Layout({ children }) {
+  // 헤더 & 푸터 레이아웃
   return (
     <S.Container>
       <Header />

@@ -47,7 +47,7 @@ export const MAIN_SIDEMENU_DATA = [
     id: 6,
     title: "즐겨찾기",
     imgPath: StarIcon,
-    uri: "/",
+    uri: "/favorites",
     variant: false,
   },
 ];

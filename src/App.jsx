@@ -6,6 +6,7 @@ import Mypage from "./pages/mypage";
 import Layout from "./layouts/layout/layout";
 import Explore from "./pages/explore/explore";
 import All from "./pages/all/all";
+import Favorites from "./pages/favorites/favorites";
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
             {/* 동아리 모집하기 */}
             <Route path="/recruit" element={<>recruit</>} />
             {/* 즐겨찾기 */}
-            <Route path="/favorites" element={<>favorites</>} />
+            <Route path="/favorites" element={<Favorites />} />
 
             <Route path="/mypage" element={<Mypage />} />
             <Route path="/notification" element={<Notification />} />

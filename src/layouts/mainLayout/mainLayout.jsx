@@ -11,6 +11,7 @@ export default function MainLayout({
   onMiniSearchClick,
 }) {
   return (
+    // 서브 헤더(미니서치, 칩스) & 컨텐츠 레이아웃
     <>
       <S.Header>
         <S.Content $miniSearch={onMiniSearchClick} $chips={onChipClick}>
