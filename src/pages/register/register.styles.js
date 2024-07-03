@@ -6,7 +6,7 @@ export const Layer = styled.div`
   margin-left: 2.375rem;
   width: 50.875rem;
   gap: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 5.625rem;
 `;
 
 export const Container = styled.div`
@@ -26,4 +26,18 @@ export const Title = styled.div`
   ${(props) => props.theme.typo.fontWeight._600};
   padding-bottom: 1rem;
   border-bottom: solid 1px ${(props) => props.theme.color.grey._200};
+`;
+
+export const Form = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+`;
+
+export const Box = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 4.313rem;
+  gap: 1.375rem;
 `;
