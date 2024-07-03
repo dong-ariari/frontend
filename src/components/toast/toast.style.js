@@ -20,7 +20,6 @@ export const Layer = styled.div`
   color: ${(props) => props.theme.color.grey._700};
   ${(props) => props.theme.typo.fontSize._6};
   ${(props) => props.theme.typo.fontWeight._500};
-  display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
@@ -32,9 +31,10 @@ export const Layer = styled.div`
   ${(props) =>
     props.$visible
       ? css`
+          display: flex;
           animation: ${fadeIn} 2.5s ease-in-out;
         `
-      : `opacity: 0;`}
+      : `display: none;`}
 `;
 
 export const Icon = styled.img``;
