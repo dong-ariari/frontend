@@ -41,8 +41,73 @@ export const DUMMY_CARD = [
     recruitText:
       "content_text_content_text_content_text_content_text_content_text_content_text_content_text_content_text_content_text_content_text_",
   },
+  
   {
     id: 5,
+    clubName: "Title",
+    posterData: img,
+    badge: "D-1",
+    recruitText:
+      "content_text_content_text_content_text_content_text_content_text_content_text_content_text_content_text_content_text_content_text_",
+  },
+  {
+    id: 6,
+    clubName: "Title",
+    posterData: img,
+    badge: "D-1",
+    recruitText:
+      "content_text_content_text_content_text_content_text_content_text_content_text_content_text_content_text_content_text_content_text_",
+  },
+  {
+    id: 7,
+    clubName: "Title",
+    posterData: img,
+    badge: "D-1",
+    recruitText:
+      "content_text_content_text_content_text_content_text_content_text_content_text_content_text_content_text_content_text_content_text_",
+  },
+  {
+    id: 8,
+    clubName: "Title",
+    posterData: img,
+    badge: "D-1",
+    recruitText:
+      "content_text_content_text_content_text_content_text_content_text_content_text_content_text_content_text_content_text_content_text_",
+  },
+  {
+    id: 9,
+    clubName: "Title",
+    posterData: img,
+    badge: "D-1",
+    recruitText:
+      "content_text_content_text_content_text_content_text_content_text_content_text_content_text_content_text_content_text_content_text_",
+  },
+  {
+    id: 10,
+    clubName: "Title",
+    posterData: img,
+    badge: "D-1",
+    recruitText:
+      "content_text_content_text_content_text_content_text_content_text_content_text_content_text_content_text_content_text_content_text_",
+  },
+  {
+    id: 11,
+    clubName: "Title",
+    posterData: img,
+    badge: "D-1",
+    recruitText:
+      "content_text_content_text_content_text_content_text_content_text_content_text_content_text_content_text_content_text_content_text_",
+  },
+  {
+    id: 12,
+    clubName: "Title",
+    posterData: img,
+    badge: "D-1",
+    recruitText:
+      "content_text_content_text_content_text_content_text_content_text_content_text_content_text_content_text_content_text_content_text_",
+  },
+  {
+    id: 13,
     clubName: "Title",
     posterData: img,
     badge: "D-1",
