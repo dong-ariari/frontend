@@ -72,8 +72,14 @@ export default function Register() {
           <S.Title>동아리 소개</S.Title>
 
           <S.Box>
-            <Textarea title="소개글" placeholder="동아리 소개를 입력해주세요" />
-            <Button title="제출하기" />
+            <Textarea
+              title="소개글"
+              placeholder="동아리 소개를 입력해주세요"
+              isEdit={true}
+              max={100}
+              onValueChange={() => {}}
+            />
+            <Button title="제출하기" onClick={()=>{console.log('submit');}} />
           </S.Box>
         </S.Container>
       </S.Layer>
