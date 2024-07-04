@@ -20,6 +20,8 @@ export default function Register() {
             <Input
               title="동아리 이름"
               placeholder="동아리 이름을 입력해주세요"
+              isEdit={true}
+              onValueChange={(value) => {console.log(value)}}
             />
             <Select
               title="동아리 분류"
