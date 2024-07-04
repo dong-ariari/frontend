@@ -11,7 +11,6 @@ const Select = ({ title, placeholder, options, isEdit, onValueChange }) => {
       onValueChange(newValue);
     }
   };
-
   return (
     <S.SelectContainer>
       <S.Title>{title}</S.Title>
