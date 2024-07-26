@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import api from "@/api/api";
+import api from "../../api/api";
 
 const Login = () => {
   const [loading, setLoading] = useState(false);
