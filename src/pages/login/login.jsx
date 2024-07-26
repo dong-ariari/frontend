@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";
-import { API_URL, REDIRECT_URI, REST_API_KEY } from "../../api/common";
+import api from "@/api/api";
 
 const Login = () => {
   const [loading, setLoading] = useState(false);
@@ -13,19 +12,10 @@ const Login = () => {
     fetchData();
   };
 
-  // 프로필 정보
   const fetchData = async () => {
-    const inputURL = `/test/token`;
     try {
-      const response = await axios.get(`${API_URL}${inputURL}`, {
-        headers: {
-          "Content-Type": "application/json; charset=utf-8",
-          "Access-Control-Allow-Origin": "*",
-        },
-      });
+      const response = await api.get("/test/token");
       console.log(response.data);
-      const accessToken = response.data.accessTokaen;
-      console.log("accessToken >>>", accessToken);
     } catch (error) {
       console.error("에러:", error);
     }
