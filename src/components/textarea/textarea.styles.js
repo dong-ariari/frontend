@@ -35,9 +35,9 @@ export const Textarea = styled.textarea`
   border-style: solid;
   border-radius: 0.5rem;
   padding: 0.75rem 1rem 0.6875rem 1rem;
-  max-width: 26.75rem;
-  min-width: 26.75rem;
-  min-height: 8.063rem;
+  max-width: 26.625rem;
+  min-width: 26.625rem;
+  min-height: 6.5rem;
   ${(props) => props.theme.typo.fontSize._7};
   ${(props) => props.theme.typo.fontWeight._500};
 

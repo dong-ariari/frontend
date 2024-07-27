@@ -11,7 +11,6 @@ const Select = ({ title, placeholder, options, isEdit, onValueChange }) => {
       onValueChange(newValue);
     }
   };
-
   return (
     <S.SelectContainer>
       <S.Title>{title}</S.Title>
@@ -19,7 +18,7 @@ const Select = ({ title, placeholder, options, isEdit, onValueChange }) => {
         value={value}
         onChange={handleChange}
         disabled={!isEdit}
-        isEditable={isEdit}
+        $isEditable={isEdit}
       >
         <option value="" disabled hidden>
           {placeholder}

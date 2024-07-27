@@ -1,11 +1,21 @@
+import { useEffect, useState } from "react";
+import DropdownComponents from "../components/dropdown/dropdownComponents";
+import {
+  DUMMY_DEPART,
+  DUMMY_FIELD,
+  DUMMY_REGION,
+} from "../data/dummy/dropdown";
+import { useDropDown, useDropDown2 } from "../hooks/useDropdown";
 import Button from "../components/button/button";
-import Input from "../components/input/input";
+import Search from "../components/search/search";
 import Textarea from "../components/textarea/textarea";
 import ToggleBtn from "../components/toggleBtn/toggleBtn";
 
 const Offcampus = () => {
   return (
     <>
+      
+
       <div style={{ backgroundColor: "#ffe8fb", padding: 100 }}>
         <Input
           title={"동아리 이름"}
@@ -36,6 +46,15 @@ const Offcampus = () => {
           btnContent1={"모집 중"}
           btnContent2={"모집 완료"}
           onToggle={() => {}}
+        />
+      </div>
+
+      <div style={{ border: "solid 3px black", padding: "50px" }}>
+        <Search
+          placeholder="관심있는 동아리를 찾을 수 있어요"
+          onSearch={(val) => {
+            console.log(val);
+          }}
         />
       </div>
     </>

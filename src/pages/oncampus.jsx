@@ -1,4 +1,7 @@
+import { useState } from "react";
+import MiniSearch from "../components/miniSearch/miniSearch";
 import Select from "../components/select/select";
+import Toast from "../components/toast/toast";
 
 const options = [
   { value: "option1", label: "Option 1" },
@@ -8,16 +11,19 @@ const options = [
 ];
 
 const Oncampus = () => {
+  const [visible, setVisible] = useState(false);
+
   return (
     <>
       <div style={{ backgroundColor: "#ffe8fb", padding: 100 }}>
-        <div>onCampus</div>
-        <Select
-          title={"동아리 분류"}
-          placeholder={"동아리 분류를 선택해주세요"}
-          options={options}
-          isEdit={true}
-        />
+        <div
+          onClick={() => {
+            setVisible(true);
+          }}
+        >
+          onCampus
+        </div>
+        <Toast setVisible={setVisible} visible={visible} placeholder={'메일을 성공적으로 보냈어요. 메일함을 확인해주세요!'}  />
       </div>
     </>
   );

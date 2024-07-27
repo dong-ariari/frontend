@@ -1,17 +1,23 @@
-import Badge from "../components/badge/badge";
-import SideMenu from "../components/sideMenu/sideMenu";
-import SideMenuComponent from "../components/sideMenu/sideMenuComponent";
-import { SIDEMENU_DATA } from "../data/components/sideMenu";
+import MailAlert from "../components/mailAlert/mailAlert.jsx";
+import { useState } from "react";
 
 const All = () => {
+  const [visible, setVisible] = useState(false);
+  console.log(visible);
+
   return (
-    <div> 
-      
-      <div>all</div>
-      <div style={{ padding: 20, backgroundColor: "#aad2e8" }}>
-        <Badge title={"badge"} />
+    <div>
+      <MailAlert
+        visible={visible}
+        setVisible={setVisible}
+        placeholder={"메일을 성공적으로 보냈어요!"}
+      />
+      <div
+        onClick={() => setVisible(true)}
+        style={{ width: "500px", backgroundColor: "pink", height: "300px" }}
+      >
+        dummy component
       </div>
-      <SideMenuComponent data={SIDEMENU_DATA} />
     </div>
   );
 };

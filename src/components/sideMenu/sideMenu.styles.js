@@ -6,10 +6,10 @@ export const Wrapper = styled.div`
   gap: 0.75rem;
 `;
 export const Container = styled.div`
-  width: 11.5rem;
+  width: 12.875rem;
   border-radius: 0.75rem;
   background-color: ${(props) => {
-    return props.$variant === true && props.theme.color.grey._100 ;
+    return props.$variant === true && props.theme.color.grey._100;
   }};
   cursor: pointer;
 `;
