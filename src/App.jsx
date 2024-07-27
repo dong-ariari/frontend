@@ -14,24 +14,14 @@ function App() {
     <Router>
       <GlobalStyle />
       <ThemeProvider theme={DefaultTheme}>
-        <Layout>
-          <Routes>
-            <Route path="/" element={<>hello world</>} />
-            {/* 둘러보기*/}
-            <Route path="/explore" element={<Explore />} />
-            {/* 전체 동아리 */}
-            <Route path="/all" element={<All />} />
-            {/* 동아리 등록하기 */}
-            <Route path="/register" element={<Register />} />
-            {/* 동아리 모집하기 */}
-            <Route path="/recruit" element={<>recruit</>} />
-            {/* 즐겨찾기 */}
-            <Route path="/favorites" element={<Favorites />} />
-
-            <Route path="/mypage" element={<Mypage />} />
-            <Route path="/notification" element={<Notification />} />
-          </Routes>
-        </Layout>
+        <Routes>
+          <Route path="/" element={<Test>Hello World</Test>} />
+          <Route path="/all" element={<All />} />
+          <Route path="/campus" element={<Oncampus />} />
+          <Route path="/offCampus" element={<Offcampus />} />
+          <Route path="/mypage" element={<Mypage />} />
+          <Route path="/notification" element={<Notification />} />
+        </Routes>
       </ThemeProvider>
     </Router>
   );
