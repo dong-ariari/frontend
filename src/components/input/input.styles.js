@@ -13,7 +13,6 @@ export const Title = styled.p`
   color: ${(props) => props.theme.color.grey._500};
   ${(props) => props.theme.typo.fontSize._6};
   ${(props) => props.theme.typo.fontWeight._500};
-  /* align-self: center; */
   align-self: flex-start;
 `;
 export const StyledInput = styled.input`
@@ -28,11 +27,9 @@ export const StyledInput = styled.input`
   border-width: 0.0625rem;
   border-style: solid;
   border-radius: 0.5rem;
-  width: 27.75rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 0.75rem;
-  padding-bottom: 0.6875rem;
+  width: 26.625rem;
+  height: 1.188rem;
+  padding: 0.75rem 1rem;
   ${(props) => props.theme.typo.fontSize._7};
   ${(props) => props.theme.typo.fontWeight._500};
 

@@ -1,6 +1,6 @@
 import { Highlight } from "../../components/banner/banner.styles";
 
-export const BANNER_DATA = {
+export const REGISTER_BANNER = {
   title: (
     <>
       아리아리 <br />

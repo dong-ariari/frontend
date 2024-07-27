@@ -14,6 +14,8 @@ export const Container = styled.div`
   height: fit-content;
   position: relative;
   cursor: pointer;
+  width: fit-content;
+  z-index: 10;
 `;
 
 export const Head = styled.button`
@@ -62,7 +64,7 @@ export const Dropdown = styled.div`
   position: absolute;
   left: 0;
   right: 0;
-  padding-top: 38px;
+  padding-top: 2.375rem;
   background-color: ${(props) => props.theme.color.grey._0};
   border-radius: 0.5rem;
   ${(props) =>

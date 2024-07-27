@@ -22,16 +22,16 @@ export const StyledSelect = styled.select`
   -moz-appearance: none;
   appearance: none;
   background-color: ${(props) =>
-    props.isEditable ? props.theme.color.grey._0 : props.theme.color.grey._200};
+    props.$isEditable ? props.theme.color.grey._0 : props.theme.color.grey._200};
   border-color: ${(props) =>
-    props.isEditable
+    props.$isEditable
       ? props.theme.color.grey._100
       : props.theme.color.grey._200};
   border-width: 0.0625rem;
   border-style: solid;
   border-radius: 0.5rem;
   width: 28.75rem;
-  padding: 0.75rem 1rem;
+  padding: 0.688rem 1rem;
   background-image: url(${Vector});
   background-repeat: no-repeat;
   background-position: right 0.75rem center;
