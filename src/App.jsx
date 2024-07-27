@@ -14,6 +14,19 @@ function App() {
     <Router>
       <GlobalStyle />
       <ThemeProvider theme={DefaultTheme}>
+        <div
+          style={{
+            backgroundColor: "pink",
+            paddingLeft: "100px",
+          }}
+        >
+          {/* <Alert
+            data={DUMMY_ALERT}
+            onClick={() => {
+              console.log("clicked");
+            }}
+          /> */}
+        </div>
         <Routes>
           <Route path="/" element={<Test>Hello World</Test>} />
           <Route path="/all" element={<All />} />
